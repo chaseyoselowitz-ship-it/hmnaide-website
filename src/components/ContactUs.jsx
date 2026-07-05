@@ -36,47 +36,78 @@ export default function ContactUs() {
       <Header />
       <main className="contact-page">
         <div className="container">
-          <p className="label">Contact</p>
-          <h1 className="section-head">Let&rsquo;s talk.</h1>
-          <div className="rule-accent" />
-          <p className="contact-intro">
-            Questions about training, workshops, or working together? Send a note
-            and Chase will get back to you.
-          </p>
+          <div className="contact-grid">
+            <div className="contact-left">
+              <p className="label">Workshops &amp; Events</p>
+              <h1 className="section-head">Host a workshop.</h1>
+              <div className="rule-accent" />
+              <p className="contact-intro">
+                Want to host a mobility workshop at your facility or event? Fill
+                out the form below.
+              </p>
+              <p className="contact-alt">
+                Booking an appointment?{' '}
+                <a
+                  className="contact-alt-link"
+                  href="https://form.typeform.com/to/EiFyHacn"
+                >
+                  Apply here.
+                </a>
+              </p>
 
-          {status === 'success' ? (
-            <div className="contact-success">
-              <p className="contact-success-title">Message sent.</p>
-              <p>Thanks for reaching out &mdash; you&rsquo;ll hear back soon.</p>
-            </div>
-          ) : (
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <label className="contact-field">
-                <span className="contact-field-label">Name</span>
-                <input type="text" name="name" required autoComplete="name" />
-              </label>
-              <label className="contact-field">
-                <span className="contact-field-label">Email</span>
-                <input type="email" name="email" required autoComplete="email" />
-              </label>
-              <label className="contact-field">
-                <span className="contact-field-label">Message</span>
-                <textarea name="message" rows={6} required />
-              </label>
-              <button
-                type="submit"
-                className="btn-pill btn-pill--primary contact-submit"
-                disabled={status === 'submitting'}
-              >
-                {status === 'submitting' ? 'Sending…' : 'Send message'}
-              </button>
-              {status === 'error' && (
-                <p className="contact-error">
-                  Something went wrong. Please try again, or email us directly.
-                </p>
+              {status === 'success' ? (
+                <div className="contact-success">
+                  <p className="contact-success-title">Message sent.</p>
+                  <p>
+                    Thanks for reaching out &mdash; you&rsquo;ll hear back soon.
+                  </p>
+                </div>
+              ) : (
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <label className="contact-field">
+                    <span className="contact-field-label">Name</span>
+                    <input type="text" name="name" required autoComplete="name" />
+                  </label>
+                  <label className="contact-field">
+                    <span className="contact-field-label">Email</span>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      autoComplete="email"
+                    />
+                  </label>
+                  <label className="contact-field">
+                    <span className="contact-field-label">
+                      Tell us about your event
+                    </span>
+                    <textarea name="message" rows={6} required />
+                  </label>
+                  <button
+                    type="submit"
+                    className="btn-pill btn-pill--primary contact-submit"
+                    disabled={status === 'submitting'}
+                  >
+                    {status === 'submitting' ? 'Sending…' : 'Send message'}
+                  </button>
+                  {status === 'error' && (
+                    <p className="contact-error">
+                      Something went wrong. Please try again, or email us
+                      directly.
+                    </p>
+                  )}
+                </form>
               )}
-            </form>
-          )}
+            </div>
+
+            <div className="contact-right">
+              <img
+                className="contact-image"
+                src="/workshop-event.jpg"
+                alt="Chase leading a mobility workshop at a live event"
+              />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />

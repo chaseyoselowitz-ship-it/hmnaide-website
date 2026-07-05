@@ -1145,6 +1145,57 @@ footer {
   min-height: 60vh;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-right {
+  position: sticky;
+  top: 6rem;
+}
+
+.contact-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-alt {
+  color: var(--w-eyebrow);
+  font-size: 0.95rem;
+  margin: -1.5rem 0 2.5rem;
+}
+
+.contact-alt-link {
+  color: var(--emerald);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--emerald);
+}
+
+.contact-alt-link:hover {
+  color: var(--emerald-deep);
+  border-color: var(--emerald-deep);
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .contact-right {
+    position: static;
+    order: -1;
+  }
+  .contact-image {
+    max-height: 420px;
+  }
+}
+
 .contact-intro {
   color: var(--w-body);
   max-width: 46ch;
