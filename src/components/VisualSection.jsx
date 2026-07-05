@@ -4,7 +4,7 @@ export default function VisualSection() {
       <div className="visual-stack">
         <h2 className="visual-head">Recover before you have to.</h2>
         <a
-          href="https://www.hmnaide.clinic/book-appointment"
+          href="https://form.typeform.com/to/EiFyHacn"
           className="circle-trigger circle-trigger--cta"
         >
           Start

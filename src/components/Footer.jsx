@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="footer-col">
             <div className="footer-header">Connect</div>
             <a
-              href="https://www.hmnaide.clinic/book-appointment"
+              href="https://form.typeform.com/to/EiFyHacn"
               className="footer-link"
             >
               Book Appointment

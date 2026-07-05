@@ -33,7 +33,7 @@ export default function HowItWorks() {
         </div>
         <div className="how-cta">
           <a
-            href="https://www.hmnaide.clinic/book-appointment"
+            href="https://form.typeform.com/to/EiFyHacn"
             className="btn-pill btn-pill--primary"
           >
             Start your application ⊕

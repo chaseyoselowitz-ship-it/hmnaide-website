@@ -13,7 +13,7 @@ export default function Hero() {
           whose bodies have started sending invoices.
         </p>
         <a
-          href="https://www.hmnaide.clinic/book-appointment"
+          href="https://form.typeform.com/to/EiFyHacn"
           className="link-small link-small--primary"
         >
           START YOUR APPLICATION ⊕
