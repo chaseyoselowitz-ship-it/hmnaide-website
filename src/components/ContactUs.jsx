@@ -46,7 +46,7 @@ export default function ContactUs() {
                 out the form below.
               </p>
               <p className="contact-alt">
-                Booking an appointment?{' '}
+                Looking to book coaching?{' '}
                 <a
                   className="contact-alt-link"
                   href="https://form.typeform.com/to/EiFyHacn"
