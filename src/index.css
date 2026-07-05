@@ -1149,17 +1149,22 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: stretch;
 }
 
+/* The image cell stretches to the left column's (form) height; the image is
+   absolutely positioned so its tall intrinsic size doesn't inflate the row. */
 .contact-right {
-  position: sticky;
-  top: 6rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .contact-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  border-radius: 12px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -1187,12 +1192,10 @@ footer {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+  /* stacked: image sits on top in a fixed-height crop box */
   .contact-right {
-    position: static;
     order: -1;
-  }
-  .contact-image {
-    max-height: 420px;
+    height: 340px;
   }
 }
 
