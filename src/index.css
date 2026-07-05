@@ -1412,3 +1412,8 @@ footer {
   line-height: 1.2;
   color: var(--w-claim);
 }
+
+/* FAQ heading fits on one line (overrides the shared section-head width cap) */
+#faq .section-head {
+  max-width: none;
+}
