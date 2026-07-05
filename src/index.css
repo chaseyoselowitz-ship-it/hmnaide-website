@@ -1117,7 +1117,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: 4rem; }
+  /* tighter side gutters so nothing gets chopped on a phone */
+  .container { padding: 0 1.25rem; }
+  /* hero grows to fit its content instead of clipping at 100vh */
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 130px 0 64px;
+  }
+  /* scale the headline so "RECOVERY." fits narrow screens */
+  .hero-title { font-size: clamp(2.5rem, 13vw, 4rem); }
+  .hero-sub { font-size: 1.15rem; max-width: 100%; }
   .grid { display: flex; flex-direction: column; }
   /* mobile: keep only the Apply CTA in the sticky header, hide the rest */
   .nav-group a:not(.nav-apply) { display: none; }
@@ -1132,6 +1142,14 @@ footer {
   .steps { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
+  .about-media { min-height: 300px; }
+  /* workshop photo: force a compact, centered size on mobile (portrait 826x1200) */
+  .workshops-media .workshops-img {
+    height: 240px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
   .package-grid { grid-template-columns: 1fr; }
   .faq-qtext { font-size: 1.05rem; }
   .faq-a { padding-left: 0; }
