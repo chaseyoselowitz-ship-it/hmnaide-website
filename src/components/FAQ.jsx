@@ -76,7 +76,7 @@ export default function FAQ() {
                   <p key={j}>{line}</p>
                 ))}
                 {f.capture && (
-                  <a className="faq-capture" href="https://www.hmnaide.clinic/contact">
+                  <a className="faq-capture" href="/contact-us">
                     {f.capture}
                   </a>
                 )}

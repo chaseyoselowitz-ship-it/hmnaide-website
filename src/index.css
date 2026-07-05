@@ -1130,3 +1130,98 @@ footer {
   .faq-qtext { font-size: 1.05rem; }
   .faq-a { padding-left: 0; }
 }
+
+/* Header logo wrapped in a home link — keep it looking like the plain lockup */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Contact page ===== */
+.contact-page {
+  padding: 8rem 0 6rem;
+  min-height: 60vh;
+}
+
+.contact-intro {
+  color: var(--w-body);
+  max-width: 46ch;
+  margin: 1.5rem 0 3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 560px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-field-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--w-eyebrow);
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: transparent;
+  border: 1px solid var(--w-rule);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--emerald);
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  border: none;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.contact-success {
+  border: 1px solid var(--emerald);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 560px;
+}
+
+.contact-success-title {
+  color: var(--emerald);
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
