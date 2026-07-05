@@ -13,7 +13,10 @@ export default function Header() {
         <a href="https://substack.com/@hmnaide" className="btn-pill">
           Newsletter
         </a>
-        <a href="https://form.typeform.com/to/EiFyHacn" className="btn-pill">
+        <a
+          href="https://form.typeform.com/to/EiFyHacn"
+          className="btn-pill nav-apply"
+        >
           Apply
         </a>
       </nav>

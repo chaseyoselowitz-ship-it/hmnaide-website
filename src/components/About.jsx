@@ -36,15 +36,15 @@ export default function About() {
               that pushes you, grounded in rehab science.
             </p>
             <p className="about-name">Chase Yoselowitz, CSCS · Founder</p>
+            <ul className="about-creds">
+              {CREDS.map((c) => (
+                <li className="about-cred" key={c}>
+                  {c}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <ul className="about-creds">
-          {CREDS.map((c) => (
-            <li className="about-cred" key={c}>
-              {c}
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
