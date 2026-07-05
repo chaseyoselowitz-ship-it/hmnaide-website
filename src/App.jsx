@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
@@ -26,6 +27,7 @@ export default function App() {
       <FAQ />
       <VisualSection />
       <Footer />
+      <SpeedInsights />
     </>
   );
 }
