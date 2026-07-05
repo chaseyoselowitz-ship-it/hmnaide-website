@@ -15,10 +15,10 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <div className="footer-header">Explore</div>
-            <a href="#approach" className="footer-link">Approach</a>
-            <a href="#results" className="footer-link">Results</a>
-            <a href="#workshops" className="footer-link">Workshops</a>
-            <a href="#faq" className="footer-link">FAQ</a>
+            <a href="/#approach" className="footer-link">Approach</a>
+            <a href="/#results" className="footer-link">Results</a>
+            <a href="/#workshops" className="footer-link">Workshops</a>
+            <a href="/#faq" className="footer-link">FAQ</a>
           </div>
           <div className="footer-col">
             <div className="footer-header">Connect</div>
@@ -28,7 +28,7 @@ export default function Footer() {
             >
               Book Appointment
             </a>
-            <a href="https://www.hmnaide.clinic/contact" className="footer-link">
+            <a href="/contact-us" className="footer-link">
               Contact
             </a>
             <a

@@ -38,7 +38,7 @@ export default function Workshops() {
               to stay in the game longer.
             </p>
             <a
-              href="https://www.hmnaide.clinic/contact"
+              href="/contact-us"
               className="btn-pill btn-pill--primary"
             >
               Get in touch
