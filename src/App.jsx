@@ -20,10 +20,10 @@ export default function App() {
       <Hero />
       <SocialProof />
       <About />
-      <Approach />
-      <WontGet />
       <HowItWorks />
       <Packages />
+      <Approach />
+      <WontGet />
       <WhoItsFor />
       <Testimonials />
       <Workshops />
