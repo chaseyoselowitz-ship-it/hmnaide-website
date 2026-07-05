@@ -10,6 +10,9 @@ export default function Header() {
         <a href="/#approach" className="btn-pill">Approach</a>
         <a href="/#results" className="btn-pill">Results</a>
         <a href="/#who" className="btn-pill">Who it&rsquo;s for</a>
+        <a href="https://substack.com/@hmnaide" className="btn-pill">
+          Newsletter
+        </a>
         <a href="https://form.typeform.com/to/EiFyHacn" className="btn-pill">
           Apply
         </a>
