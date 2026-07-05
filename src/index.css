@@ -815,6 +815,8 @@ footer {
 
 /* Closing CTA band (repurposed visual section) */
 .circle-trigger--cta {
+  width: 150px;
+  height: 150px;
   text-decoration: none;
   background: var(--emerald);
   border-color: var(--emerald);
