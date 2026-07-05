@@ -1,8 +1,8 @@
 const LINES = [
-  'Corrective-exercise theater and endless activation drills.',
-  'Passive treatment you have to keep buying week after week.',
-  'Training to failure. You have a job tomorrow.',
-  'The template everyone else got.',
+  'Busywork exercises that build nothing.',
+  'Treatments you have to keep buying forever.',
+  'Workouts that wreck you for the next day.',
+  'The same plan everyone else got.',
 ];
 
 export default function WontGet() {

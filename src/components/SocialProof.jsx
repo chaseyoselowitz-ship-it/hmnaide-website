@@ -4,18 +4,18 @@
 // Non-fighter faces lead so the ICP (operators, executives) sees themselves
 // first, then the champions. Image numbers stay bound to each person.
 const PEOPLE = [
-  { img: '04', name: 'Zach Y.', role: 'Executive' },
-  { img: '06', name: 'Nicholas C.', role: 'Executive' },
-  { img: '09', name: 'Liz Y.', role: 'Executive' },
-  { img: '07', name: 'Jodi Y.', role: 'Retired' },
-  { img: '10', name: 'Jeff S.', role: 'Operator' },
-  { img: '01', name: 'Nick S.', role: 'BJJ Athlete' },
-  { img: '02', name: 'Danny M.', role: 'BJJ Athlete' },
+  { img: '04', name: 'Zach Y.', role: 'Weekend Warrior' },
+  { img: '06', name: 'Nicholas C.', role: 'Weekend Warrior' },
+  { img: '09', name: 'Liz Y.', role: 'Weekend Warrior' },
+  { img: '07', name: 'Jodi Y.', role: 'Everyday Athlete' },
+  { img: '10', name: 'Jeff S.', role: 'Everyday Athlete' },
+  { img: '01', name: 'Nick S.', role: 'World Champion' },
+  { img: '02', name: 'Danny M.', role: 'World Champion' },
   { img: '03', name: 'Jacqueline A.', role: 'UFC Fighter' },
-  { img: '05', name: 'Gigi M.', role: 'BJJ Athlete' },
-  { img: '08', name: 'Jose P.', role: 'BJJ Athlete' },
-  { img: '11', name: 'Martin C.', role: 'BJJ Athlete' },
-  { img: '12', name: 'Mohammed S.', role: 'BJJ Athlete' },
+  { img: '05', name: 'Gigi M.', role: 'World Champion' },
+  { img: '08', name: 'Jose P.', role: 'World Champion' },
+  { img: '11', name: 'Martin C.', role: 'World Champion' },
+  { img: '12', name: 'Mohammed S.', role: 'World Champion' },
 ];
 
 function initials(name) {
@@ -52,7 +52,7 @@ export default function SocialProof() {
     <section id="proof" className="proof" aria-label="Client social proof">
       <div className="container">
         <h2 className="proof-head">
-          Trusted by operators, executives, and world champions.
+          Trusted by everyday athletes, weekend warriors, and world champions.
         </h2>
       </div>
       <div className="proof-marquee">

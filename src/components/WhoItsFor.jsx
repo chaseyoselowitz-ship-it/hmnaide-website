@@ -1,15 +1,15 @@
 const CARDS = [
   {
-    title: 'The operator',
-    body: 'A career that eats time. You want decades of strong, not a peak.',
+    title: 'The Everyday Athlete',
+    body: 'You train to stay strong, healthy, and capable for decades.',
   },
   {
-    title: 'The rebuilder',
-    body: 'Cleared, past the acute stage, done being told to rest.',
+    title: 'The Weekend Warrior',
+    body: 'Your sport isn’t your job, but losing it isn’t an option.',
   },
   {
-    title: 'The competitor',
-    body: 'Grappler, lifter, racquet athlete. Durability decides how long you get.',
+    title: 'The Competitor',
+    body: 'You compete to win. Recovery keeps you winning longer.',
   },
 ];
 
@@ -26,6 +26,9 @@ export default function WhoItsFor() {
             </article>
           ))}
         </div>
+        <p className="who-note">
+          Same system at every level. The program meets you where you are.
+        </p>
       </div>
     </section>
   );

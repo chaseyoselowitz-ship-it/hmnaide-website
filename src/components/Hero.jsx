@@ -7,10 +7,10 @@ export default function Hero() {
       <div className="container">
         <span className="label">HMN AIDE · pronounced: human aid</span>
         <h1 className="hero-title">REALLY GOOD<br />RECOVERY.</h1>
-        <p className="hero-support">Train First, Worry Never.</p>
         <p className="hero-sub">
-          Recovery you build with load. Strength and mobility for high achievers
-          whose bodies have started sending invoices.
+          Aches, injuries, and slow recovery don&rsquo;t fix themselves with
+          rest. You train your way out. Custom 1:1 strength and mobility
+          coaching, for everyday athletes up to world champions.
         </p>
         <a
           href="https://form.typeform.com/to/EiFyHacn"

@@ -55,6 +55,13 @@ const FAQS = [
       'No. Some of the most rewarding work I do is with people who are starting from scratch or coming back to it after years away. If you’ve never touched a barbell, that’s fine. We’ll teach you. If you’ve been lifting for a decade, we’ll meet you where you are.',
     ],
   },
+  {
+    n: '06',
+    q: 'What’s the difference between the packages?',
+    a: [
+      'The assessment decides the program; the package decides how much of me you get.',
+    ],
+  },
 ];
 
 export default function FAQ() {
@@ -64,8 +71,8 @@ export default function FAQ() {
         <span className="label">Common Questions</span>
         <h2 className="section-head">Questions worth asking.</h2>
         <div className="faq-list">
-          {FAQS.map((f, i) => (
-            <details className="faq-item" key={f.n} open={i === 0}>
+          {FAQS.map((f) => (
+            <details className="faq-item" key={f.n}>
               <summary className="faq-q">
                 <span className="faq-n">{f.n}</span>
                 <span className="faq-qtext">{f.q}</span>

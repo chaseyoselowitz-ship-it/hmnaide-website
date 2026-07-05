@@ -1,15 +1,15 @@
 const TILES = [
   {
     title: 'Strength',
-    body: 'Heavy things stop being events. Everything in your day becomes sub-maximal.',
+    body: 'Get strong enough that nothing in your day feels heavy.',
   },
   {
-    title: 'Range you own',
-    body: 'Mobility built like strength: loaded, at end range. Not stretching that changes nothing.',
+    title: 'Mobility that lasts',
+    body: 'Flexibility built with weights, so it sticks. Stretching alone doesn’t.',
   },
   {
-    title: 'Fits your calendar',
-    body: 'Two gears: standard week and travel week. Never to failure. You have a job tomorrow.',
+    title: 'Fits your life',
+    body: 'A full plan for normal weeks, a short one for busy weeks. You never fall off.',
   },
 ];
 
@@ -21,15 +21,6 @@ export default function Approach() {
           <div style={{ gridColumn: 'span 3' }}>
             <span className="label">The HMN AIDE Approach</span>
             <div className="rule-accent" />
-            <figure className="founder">
-              <div className="founder-avatar">
-                <img src="/chase.png" alt="Chase Yoselowitz" />
-              </div>
-              <figcaption className="founder-caption">
-                <span className="founder-name">Chase Yoselowitz</span>
-                <span className="founder-role">Founder of HMN AIDE</span>
-              </figcaption>
-            </figure>
           </div>
           <div className="approach-copy">
             <h2 className="claim">
@@ -37,10 +28,8 @@ export default function Approach() {
               <span className="highlight--accent">We train systems.</span>
             </h2>
             <p>
-              You&rsquo;re not broken. You&rsquo;re under-built for the life
-              you&rsquo;re asking your body to live. The fix isn&rsquo;t more
-              passive treatment. It&rsquo;s load, applied intelligently, through
-              full range of motion.
+              Aches and injuries usually mean one thing: your body is
+              under-built for what you ask of it. Training fixes that.
             </p>
 
             <div className="approach-tiles">
