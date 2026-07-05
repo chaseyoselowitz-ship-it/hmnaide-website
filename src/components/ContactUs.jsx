@@ -2,9 +2,8 @@ import { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-// Submissions are sent through Formspree. Replace YOUR_FORM_ID below with the
-// ID from your own Formspree form (see the setup steps Chase was given).
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+// Submissions are sent through Formspree (form ID mbdvwzek).
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdvwzek';
 
 export default function ContactUs() {
   // idle | submitting | success | error
