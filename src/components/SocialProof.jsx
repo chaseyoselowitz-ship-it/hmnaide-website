@@ -52,7 +52,7 @@ export default function SocialProof() {
     <section id="proof" className="proof" aria-label="Client social proof">
       <div className="container">
         <h2 className="proof-head">
-          Trusted by operators, executives, and world champions.
+          Trusted by everyday athletes, weekend warriors, and world champions.
         </h2>
       </div>
       <div className="proof-marquee">

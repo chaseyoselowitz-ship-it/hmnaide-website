@@ -33,10 +33,7 @@ export default function Workshops() {
           <div className="workshops-copy">
             <span className="label">Mobility Workshops</span>
             <div className="rule-accent" />
-            <p>
-              HMN AIDE mobility workshops, for gyms, events, and teams that want
-              to stay in the game longer.
-            </p>
+            <p>Mobility workshops for gyms, events, and teams.</p>
             <a
               href="/contact-us"
               className="btn-pill btn-pill--primary"

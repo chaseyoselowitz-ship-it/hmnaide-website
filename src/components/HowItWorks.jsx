@@ -1,18 +1,23 @@
 const STEPS = [
   {
     n: '01',
-    title: 'Apply and talk',
-    body: 'Application first, then a call on your history and goals.',
+    title: 'Apply',
+    body: 'A short form. Two minutes.',
   },
   {
     n: '02',
-    title: 'Get assessed',
-    body: 'In person if you’re local, on video if you’re remote. Your program gets built from this, not from a template.',
+    title: 'Talk',
+    body: 'A call about your goals, your history, and what you’ve tried.',
   },
   {
     n: '03',
+    title: 'Assess',
+    body: 'In person or on video. Your program comes from this.',
+  },
+  {
+    n: '04',
     title: 'Train and recover',
-    body: 'First week of programming within days, progressed as you adapt.',
+    body: 'Your first week of programming arrives within days.',
   },
 ];
 
@@ -20,8 +25,8 @@ export default function HowItWorks() {
   return (
     <section id="how" className="section border-top">
       <div className="container">
-        <span className="label">How it works</span>
-        <h2 className="section-head">Three steps to get started.</h2>
+        <span className="label">The Process</span>
+        <h2 className="section-head">How we work.</h2>
         <div className="steps">
           {STEPS.map((s) => (
             <div className="step" key={s.n}>

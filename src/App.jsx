@@ -1,11 +1,13 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
+import About from './components/About';
 import Approach from './components/Approach';
 import WontGet from './components/WontGet';
-import Testimonials from './components/Testimonials';
 import HowItWorks from './components/HowItWorks';
+import Packages from './components/Packages';
 import WhoItsFor from './components/WhoItsFor';
+import Testimonials from './components/Testimonials';
 import Workshops from './components/Workshops';
 import FAQ from './components/FAQ';
 import VisualSection from './components/VisualSection';
@@ -17,11 +19,13 @@ export default function App() {
       <Header />
       <Hero />
       <SocialProof />
+      <About />
       <Approach />
       <WontGet />
-      <Testimonials />
       <HowItWorks />
+      <Packages />
       <WhoItsFor />
+      <Testimonials />
       <Workshops />
       <FAQ />
       <VisualSection />
