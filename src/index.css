@@ -226,6 +226,20 @@ header {
   opacity: 0.8;
 }
 
+/* Text-protection scrim — keeps the headline and paragraph readable over the wave */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.88) 55%, rgba(0, 0, 0, 0) 92%);
+  pointer-events: none;
+}
+
+.hero .container {
+  z-index: 3;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -237,7 +251,7 @@ header {
   font-weight: 800;
   line-height: 0.9;
   margin-bottom: 2rem;
-  mix-blend-mode: exclusion;
+  color: var(--w-claim);
 }
 
 .hero-sub {
@@ -246,7 +260,6 @@ header {
   color: var(--w-body);
   margin-bottom: 3rem;
   font-weight: 500;
-  mix-blend-mode: exclusion;
 }
 
 /* Feature strip */
