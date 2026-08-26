@@ -1154,8 +1154,6 @@ footer {
   .result-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-media { min-height: 300px; }
   /* workshop photo: force a compact, centered size on mobile (portrait 826x1200) */
   .workshops-media .workshops-img {
     height: 240px;
@@ -1163,7 +1161,6 @@ footer {
     max-width: 100%;
     margin: 0 auto;
   }
-  .package-grid { grid-template-columns: 1fr; }
   .faq-qtext { font-size: 1.05rem; }
   .faq-a { padding-left: 0; }
 }
@@ -1447,4 +1444,30 @@ footer {
 /* FAQ heading fits on one line (overrides the shared section-head width cap) */
 #faq .section-head {
   max-width: none;
+}
+
+/* ===== Mobile overrides that must outrank later base rules =====
+   The main @media (max-width: 768px) block sits above the About and Packages
+   sections, so their base declarations (same specificity, later in the file)
+   were winning on phones: About stayed a 5fr/7fr split and Packages stayed
+   3-across. These live at the end of the file so cascade order is on our
+   side. Desktop is untouched. */
+@media (max-width: 768px) {
+  /* stack: photo on top, story underneath */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  /* fixed crop box instead of stretching to the copy column's height */
+  .about-media {
+    min-height: 0;
+    height: 380px;
+  }
+  /* bias the crop toward the face rather than the top of the frame */
+  .about-photo {
+    object-position: center 20%;
+  }
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
 }
