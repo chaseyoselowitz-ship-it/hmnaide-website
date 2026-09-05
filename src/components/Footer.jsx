@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
 
 export default function Footer() {
   return (
@@ -23,7 +24,8 @@ export default function Footer() {
           <div className="footer-col">
             <div className="footer-header">Connect</div>
             <a
-              href="https://form.typeform.com/to/EiFyHacn"
+              href={CALENDLY_URL}
+          onClick={openCalendly}
               className="footer-link"
             >
               Book Appointment

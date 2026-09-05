@@ -1,3 +1,5 @@
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
+
 export default function VisualSection() {
   return (
     <section className="visual-section">
@@ -6,7 +8,8 @@ export default function VisualSection() {
           Really good recovery is the kind you built in advance.
         </p>
         <a
-          href="https://form.typeform.com/to/EiFyHacn"
+          href={CALENDLY_URL}
+          onClick={openCalendly}
           className="circle-trigger circle-trigger--cta"
         >
           Start

@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
 
 export default function Header() {
   return (
@@ -14,7 +15,8 @@ export default function Header() {
           Newsletter
         </a>
         <a
-          href="https://form.typeform.com/to/EiFyHacn"
+          href={CALENDLY_URL}
+          onClick={openCalendly}
           className="btn-pill nav-apply"
         >
           Apply

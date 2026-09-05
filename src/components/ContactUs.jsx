@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
 
 // Submissions are sent through Formspree (form ID mbdvwzek).
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdvwzek';
@@ -48,7 +49,8 @@ export default function ContactUs() {
                 Looking to book coaching?{' '}
                 <a
                   className="contact-alt-link"
-                  href="https://form.typeform.com/to/EiFyHacn"
+                  href={CALENDLY_URL}
+                  onClick={openCalendly}
                 >
                   Apply here.
                 </a>
