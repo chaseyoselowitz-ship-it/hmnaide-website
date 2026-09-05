@@ -1,4 +1,5 @@
 import DitherCanvas from './DitherCanvas';
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
 
 export default function Hero() {
   return (
@@ -13,7 +14,8 @@ export default function Hero() {
           coaching, for everyday athletes up to world champions.
         </p>
         <a
-          href="https://form.typeform.com/to/EiFyHacn"
+          href={CALENDLY_URL}
+          onClick={openCalendly}
           className="link-small link-small--primary"
         >
           START YOUR APPLICATION ⊕

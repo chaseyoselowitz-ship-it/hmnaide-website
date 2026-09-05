@@ -1,3 +1,5 @@
+import { CALENDLY_URL, openCalendly } from '../calendly.js'
+
 const STEPS = [
   {
     n: '01',
@@ -38,7 +40,8 @@ export default function HowItWorks() {
         </div>
         <div className="how-cta">
           <a
-            href="https://form.typeform.com/to/EiFyHacn"
+            href={CALENDLY_URL}
+          onClick={openCalendly}
             className="btn-pill btn-pill--primary"
           >
             Start your application ⊕
