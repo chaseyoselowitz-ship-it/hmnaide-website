@@ -1,66 +1,28 @@
-// Order matches the reference strip. `img` is the numbered file that will land
-// in public/social/. Until the real photos are dropped in, each avatar falls
-// back to an initials monogram so the layout previews cleanly.
-// Non-fighter faces lead so the ICP (operators, executives) sees themselves
-// first, then the champions. Image numbers stay bound to each person.
-const PEOPLE = [
-  { img: '04', name: 'Zach Y.', role: 'Weekend Warrior' },
-  { img: '06', name: 'Nicholas C.', role: 'Weekend Warrior' },
-  { img: '09', name: 'Liz Y.', role: 'Weekend Warrior' },
-  { img: '07', name: 'Jodi Y.', role: 'Everyday Athlete' },
-  { img: '10', name: 'Jeff S.', role: 'Everyday Athlete' },
-  { img: '01', name: 'Nick S.', role: 'World Champion' },
-  { img: '02', name: 'Danny M.', role: 'World Champion' },
-  { img: '03', name: 'Jacqueline A.', role: 'UFC Fighter' },
-  { img: '05', name: 'Gigi M.', role: 'World Champion' },
-  { img: '08', name: 'Jose P.', role: 'World Champion' },
-  { img: '11', name: 'Martin C.', role: 'World Champion' },
-  { img: '12', name: 'Mohammed S.', role: 'World Champion' },
+// Coach strip. Sits directly under the hero in the slot the client marquee used
+// to hold. Only facts about Chase, which need nobody's consent: no client
+// names, photos, pills, outcomes, or counts. Consented client proof lives in
+// Results, never here.
+const CHIPS = [
+  'Chase Yoselowitz, CSCS',
+  'B.S. Kinesiology',
+  'BJJ brown belt',
+  'IBJJF Pan American champion',
+  'Still competing',
+  'Has coached UFC, ADCC, and IBJJF competitors',
 ];
 
-function initials(name) {
-  return name
-    .split(' ')
-    .map((p) => p[0])
-    .join('')
-    .replace('.', '')
-    .toUpperCase();
-}
-
-function Person({ p }) {
-  // Monogram sits underneath; the photo is layered on top and covers it once
-  // the real file loads. If the file is missing, the img renders empty and the
-  // monogram shows through — no dependence on the onError event firing.
-  return (
-    <figure className="proof-item">
-      <div className="proof-avatar">
-        <span className="proof-monogram">{initials(p.name)}</span>
-        <img src={`/social/${p.img}.png`} alt={p.name} />
-      </div>
-      <figcaption className="proof-cap">
-        <span className="proof-name">{p.name}</span>
-        <span className="proof-pill">{p.role}</span>
-      </figcaption>
-    </figure>
-  );
-}
-
 export default function SocialProof() {
-  // Rendered twice back-to-back so the marquee can loop seamlessly.
-  const loop = [...PEOPLE, ...PEOPLE];
   return (
-    <section id="proof" className="proof" aria-label="Client social proof">
+    <section className="proof proof--strip" aria-label="Coach credentials">
       <div className="container">
-        <h2 className="proof-head">
-          Trusted by everyday athletes, weekend warriors, and world champions.
-        </h2>
-      </div>
-      <div className="proof-marquee">
-        <div className="proof-track">
-          {loop.map((p, i) => (
-            <Person key={`${p.img}-${i}`} p={p} />
+        <span className="label">Your coach</span>
+        <ul className="proof-chips">
+          {CHIPS.map((c) => (
+            <li className="proof-pill" key={c}>
+              {c}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

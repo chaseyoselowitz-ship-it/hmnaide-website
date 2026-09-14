@@ -1,4 +1,4 @@
-// v8: one format for every card — category chip, bold headline, quote, name.
+// v8: one format for every card: category chip, bold headline, quote, name.
 // Quotes are lightly trimmed (Mohammed, Jose, Jacque) so each card scans in the
 // same three seconds; no words changed, only cut.
 const TESTIMONIALS = [
@@ -56,8 +56,6 @@ export default function Testimonials() {
     <section id="results" className="section border-top">
       <div className="container">
         <span className="label">Client Results</span>
-        <h2 className="section-head">Real people. Real recovery. Real results.</h2>
-        <p className="section-kicker">Nobody here was massaged back to health.</p>
         <div className="tcard-grid">
           {TESTIMONIALS.map((t) => (
             <figure className="tcard" key={t.name}>

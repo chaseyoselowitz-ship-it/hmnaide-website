@@ -1,17 +1,9 @@
-import { useEffect, useState } from 'react';
-
-const IMG = '/workshop-scale.jpg';
+import { useState } from 'react';
 
 export default function Workshops() {
-  // Preload to decide placeholder vs. real image. Reliable even under the dev
-  // server's SPA fallback (an HTML response fails to decode as an image).
-  const [hasImg, setHasImg] = useState(false);
-  useEffect(() => {
-    const im = new Image();
-    im.onload = () => setHasImg(true);
-    im.onerror = () => setHasImg(false);
-    im.src = IMG;
-  }, []);
+  // The image renders directly (lazy, sized) and swaps to the placeholder only
+  // if the file fails to load. No Image() preload, so nothing is fetched twice.
+  const [hasImg, setHasImg] = useState(true);
 
   return (
     <section id="workshops" className="section border-top">
@@ -21,8 +13,15 @@ export default function Workshops() {
             {hasImg ? (
               <img
                 className="workshops-img"
-                src={IMG}
+                src="/workshop-event.webp"
+                srcSet="/workshop-event-700.webp 700w, /workshop-event.webp 1206w"
+                sizes="(max-width: 768px) 165px, 33vw"
+                width="1206"
+                height="1726"
+                loading="lazy"
+                decoding="async"
                 alt="HMN AIDE mobility workshop event"
+                onError={() => setHasImg(false)}
               />
             ) : (
               <div className="media-placeholder">
@@ -31,14 +30,24 @@ export default function Workshops() {
             )}
           </div>
           <div className="workshops-copy">
-            <span className="label">Mobility Workshops</span>
+            <span className="label">Mobility Workshops for Grapplers</span>
             <div className="rule-accent" />
-            <p>Mobility workshops for gyms, events, and teams.</p>
+            <p>
+              A session on your academy&rsquo;s own mat, built around the positions jiu-jitsu folds you into: hips, low back,
+              shoulders, neck. It is loaded end-range work, not a stretching
+              circuit, because a range you can only reach when nobody is
+              pushing on you is a guard that only works in drilling.
+            </p>
+            <p>
+              I run these at academies around South Florida, so if you train
+              somewhere and want one, send me the academy and I will pitch the
+              owner myself.
+            </p>
             <a
-              href="/contact-us"
+              href="/contact-us?about=workshop"
               className="btn-pill btn-pill--primary"
             >
-              Get in touch
+              Bring one to your academy
             </a>
           </div>
         </div>

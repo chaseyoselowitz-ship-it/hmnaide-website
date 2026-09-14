@@ -1,13 +1,13 @@
 :root {
-  /* HMN AIDE Brand Kit v2 — two neutrals + one accent */
+  /* HMN AIDE Brand Kit v2: two neutrals + one accent */
   --ink: #000000;          /* full-bleed background on every surface */
   --paper: #ffffff;        /* text, rules, outlines */
-  --emerald: #13a572;      /* the one accent — solid only */
+  --emerald: #13a572;      /* the one accent: solid only */
   --emerald-deep: #0e8f5e; /* pressed / hover */
   --emerald-ink: #042619;  /* label on an emerald fill */
   --tint: #0b201a;         /* optional near-black emerald surface */
 
-  /* Hierarchy = white at fixed opacities, never new hues */
+  /* Hierarchy = white at set opacities, never new hues */
   --w-claim: rgba(255, 255, 255, 1);      /* 1.00 the claim */
   --w-body: rgba(255, 255, 255, 0.75);    /* 0.75 body / support */
   --w-eyebrow: rgba(255, 255, 255, 0.5);  /* 0.50 eyebrows, secondary */
@@ -44,7 +44,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 
-/* Eyebrow label — 700 / 0.5 / +3 tracking, ALL CAPS */
+/* Eyebrow label: 700 / 0.5 / +3 tracking, ALL CAPS */
 .label {
   font-size: 0.7rem;
   font-weight: 700;
@@ -53,10 +53,6 @@ h1, h2, h3, h4 {
   color: var(--w-eyebrow);
   margin-bottom: 0.5rem;
   display: block;
-}
-
-.label::after {
-  content: " —";
 }
 
 /* Layout */
@@ -79,7 +75,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* Pill button — outline default */
+/* Pill button: outline default */
 .btn-pill {
   display: inline-flex;
   align-items: center;
@@ -104,7 +100,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-/* Primary CTA — the one emerald pop. Emerald fill, ink-green label */
+/* Primary CTA: the one emerald pop. Emerald fill, ink-green label */
 .btn-pill--primary {
   background: var(--emerald);
   border-color: var(--emerald);
@@ -142,7 +138,7 @@ h1, h2, h3, h4 {
   border-color: var(--paper);
 }
 
-/* Emerald CTA variant of the small link — the primary action pop */
+/* Emerald CTA variant of the small link: the primary action pop */
 .link-small--primary {
   background: var(--emerald);
   border-color: var(--emerald);
@@ -172,14 +168,14 @@ header {
   align-items: center;
 }
 
-/* Wordmark — logo face is 700, tight tracking */
+/* Wordmark: logo face is 700, tight tracking */
 .logo {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
-/* HMN AIDE logo lockup — mark + label */
+/* HMN AIDE logo lockup: mark + label */
 .logo-lockup {
   display: inline-flex;
   align-items: center;
@@ -226,7 +222,7 @@ header {
   opacity: 0.8;
 }
 
-/* Text-protection scrim — keeps the headline and paragraph readable over the wave */
+/* Text-protection scrim: keeps the headline and paragraph readable over the wave */
 .hero::before {
   content: "";
   position: absolute;
@@ -247,7 +243,8 @@ header {
 }
 
 .hero-title {
-  font-size: clamp(4rem, 12vw, 11rem);
+  /* two twenty-character sentences, one line each inside the 1400px container */
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
   font-weight: 800;
   line-height: 0.9;
   margin-bottom: 2rem;
@@ -260,6 +257,29 @@ header {
   color: var(--w-body);
   margin-bottom: 3rem;
   font-weight: 500;
+}
+
+/* Hero CTA row: primary pill plus the text link to #packages */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* One sentence under the buttons: what the click leads to */
+.hero-what {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 48ch;
+  color: var(--w-body);
+  margin-top: 1.25rem;
+}
+
+/* Anchored sections land below the pinned header, not under it */
+section[id],
+main[id] {
+  scroll-margin-top: 96px;
 }
 
 /* Feature strip */
@@ -293,7 +313,7 @@ header {
   color: var(--w-body);
 }
 
-/* The one data point read first — emerald accent value */
+/* The one data point read first: emerald accent value */
 .stat-accent {
   color: var(--emerald);
 }
@@ -313,7 +333,7 @@ header {
   line-height: 1.2;
 }
 
-/* Muted-to-full inline emphasis — de-emphasized until read */
+/* Muted-to-full inline emphasis: de-emphasized until read */
 .highlight {
   color: var(--w-rule);
   transition: color 0.3s;
@@ -323,7 +343,7 @@ header {
   color: var(--paper);
 }
 
-/* The single highlighted word in the claim — emerald, solid */
+/* The single highlighted word in the claim: emerald, solid */
 .highlight--accent {
   color: var(--emerald);
 }
@@ -415,7 +435,7 @@ footer {
   mix-blend-mode: exclusion;
 }
 
-/* Social proof — emerald band with an auto-scrolling avatar marquee */
+/* Social proof: emerald band with an auto-scrolling avatar marquee */
 .proof {
   background: var(--emerald);
   padding: 5.5rem 0;
@@ -549,6 +569,31 @@ footer {
   }
 }
 
+/* Coach strip: the same emerald band as a strip, not a screen. A label and
+   one wrapping row of chips; no faces, no track, no animation. */
+.proof--strip {
+  padding: 1.5rem 0;
+}
+
+.proof--strip .label {
+  color: var(--emerald-ink);
+  margin-bottom: 0.75rem;
+}
+
+.proof-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.proof--strip .proof-pill {
+  white-space: normal;
+  text-align: center;
+}
+
 /* Generic content section */
 .section {
   padding: 8rem 0;
@@ -565,7 +610,7 @@ footer {
   max-width: 16ch;
 }
 
-/* Accent rule (short) — the one structural emerald mark, 200px / stroke 2 */
+/* Accent rule (short): the one structural emerald mark, 200px / stroke 2 */
 .rule-accent {
   width: 200px;
   max-width: 100%;
@@ -830,6 +875,8 @@ footer {
 .circle-trigger--cta {
   width: 150px;
   height: 150px;
+  padding: 0 1.25rem;
+  line-height: 1.3;
   text-decoration: none;
   background: var(--emerald);
   border-color: var(--emerald);
@@ -920,7 +967,7 @@ footer {
   color: var(--emerald);
 }
 
-/* Mobility Workshops — image left, copy right */
+/* Mobility Workshops: image left, copy right */
 .workshops-grid {
   align-items: center;
 }
@@ -997,6 +1044,14 @@ footer {
   line-height: 1;
 }
 
+/* The "instead" line under each item */
+.wontget-sub {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85em;
+  color: var(--w-body);
+}
+
 /* Testimonial stat pull-outs + kicker */
 .section-kicker {
   margin: -2rem 0 3rem;
@@ -1018,10 +1073,20 @@ footer {
   color: var(--w-claim);
 }
 
-/* How it works — numbered steps */
+/* Results: body paragraphs under the kicker */
+#results .container > p:not(.section-kicker) {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--w-body);
+  max-width: 62ch;
+  margin-bottom: 1.25rem;
+}
+
+/* How it works: numbered steps (five) */
 .steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   margin-top: 1.5rem;
 }
@@ -1057,7 +1122,7 @@ footer {
   margin-top: 3.5rem;
 }
 
-/* Who it's for — three cards */
+/* Who it's for: three cards */
 .who-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1132,18 +1197,43 @@ footer {
 @media (max-width: 768px) {
   /* tighter side gutters so nothing gets chopped on a phone */
   .container { padding: 0 1.25rem; }
-  /* hero grows to fit its content instead of clipping at 100vh */
+  /* pinned header: gutter matches the container, the lockup drops to 40px
+     (Header.jsx passes size={40} under this breakpoint), and the Apply pill is
+     the only nav item, filled so it reads on black. */
+  header { padding: 1.25rem; }
+  header .logo-word { font-size: 0.95rem; }
+  .nav-group a:not(.nav-apply) { display: none; }
+  .nav-apply {
+    background: var(--emerald);
+    border-color: var(--emerald);
+    color: var(--emerald-ink);
+    padding: 0.7rem 1.3rem;
+  }
+  /* hero grows to fit its content instead of clipping at 100vh; the primary
+     pill must land inside the first screen at 390x844 */
   .hero {
     min-height: auto;
     align-items: flex-start;
-    padding: 130px 0 64px;
+    padding: 96px 0 56px;
   }
-  /* scale the headline so "RECOVERY." fits narrow screens */
+  /* on a phone the wave sits under the copy, not beside it, so the scrim
+     runs top to bottom and stays dark enough to read the explainer through */
+  .hero::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.82) 100%);
+  }
+  /* each H1 sentence wraps to two lines at this size */
   .hero-title { font-size: clamp(2.5rem, 13vw, 4rem); }
-  .hero-sub { font-size: 1.15rem; max-width: 100%; }
+  .hero-sub { font-size: 1.05rem; max-width: 100%; margin-bottom: 2rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  /* every in-page Calendly pill runs full width on a phone */
+  .hero-actions .btn-pill,
+  .package-cta .btn-pill,
+  .how-cta .btn-pill,
+  .circle-trigger--cta {
+    width: 100%;
+    max-width: 420px;
+  }
   .grid { display: flex; flex-direction: column; }
-  /* mobile: keep only the Apply CTA in the sticky header, hide the rest */
-  .nav-group a:not(.nav-apply) { display: none; }
   .big-copy { font-size: 1.5rem; }
   .stat-grid { flex-direction: column; gap: 2rem; }
   .section { padding: 5rem 0; }
@@ -1154,8 +1244,6 @@ footer {
   .result-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-media { min-height: 300px; }
   /* workshop photo: force a compact, centered size on mobile (portrait 826x1200) */
   .workshops-media .workshops-img {
     height: 240px;
@@ -1163,12 +1251,25 @@ footer {
     max-width: 100%;
     margin: 0 auto;
   }
-  .package-grid { grid-template-columns: 1fr; }
+  .about-cred { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
   .faq-qtext { font-size: 1.05rem; }
   .faq-a { padding-left: 0; }
+  /* closer: auto height, and the circle becomes a pill, so the last screen is
+     a line and a button rather than a screen of black around one word */
+  .visual-section { height: auto; padding: 5rem 0; }
+  .circle-trigger--cta {
+    height: auto;
+    border-radius: 999px;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.85rem;
+  }
+  .circle-trigger--cta:hover { transform: none; }
+  /* .about-grid, .about-media, .package-grid, .package-card: see the LAST
+     media block at the end of this file. Their base rules sit below this
+     block, so an override written here would lose on source order. */
 }
 
-/* Header logo wrapped in a home link — keep it looking like the plain lockup */
+/* Header logo wrapped in a home link: keep it looking like the plain lockup */
 .logo-link {
   display: inline-flex;
   align-items: center;
@@ -1229,9 +1330,9 @@ footer {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  /* stacked: image sits on top in a fixed-height crop box */
+  /* stacked: the words and the form come first, the photo drops below them
+     in a crop box of set height */
   .contact-right {
-    order: -1;
     height: 340px;
   }
 }
@@ -1265,8 +1366,17 @@ footer {
   color: var(--w-eyebrow);
 }
 
+/* Grid items default to min-width:auto, so a long <option> label would widen
+   the whole column past a phone screen; cap the cells and the controls. */
+.contact-grid > * {
+  min-width: 0;
+}
+
 .contact-field input,
-.contact-field textarea {
+.contact-field textarea,
+.contact-field select {
+  width: 100%;
+  min-width: 0;
   background: transparent;
   border: 1px solid var(--w-rule);
   border-radius: 8px;
@@ -1277,8 +1387,14 @@ footer {
   transition: border-color 0.25s ease;
 }
 
+.contact-field select option {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .contact-field input:focus,
-.contact-field textarea:focus {
+.contact-field textarea:focus,
+.contact-field select:focus {
   outline: none;
   border-color: var(--emerald);
 }
@@ -1357,6 +1473,16 @@ footer {
   color: var(--w-claim);
   font-weight: 800;
   margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.about-copy .about-role {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.about-copy .link-small {
+  margin-bottom: 1.5rem;
 }
 
 .about-creds {
@@ -1412,9 +1538,155 @@ footer {
 }
 
 .package-note {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   color: var(--w-eyebrow);
   font-size: 0.95rem;
+}
+
+/* Program descriptor lines between the label and the head */
+.package-descriptor {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--w-body);
+  max-width: 60ch;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.package-descriptor--why {
+  font-size: 1rem;
+  color: var(--w-eyebrow);
+  margin-bottom: 1.5rem;
+}
+
+.package-intro {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--w-body);
+  max-width: 62ch;
+  margin: -1.5rem 0 2.5rem;
+}
+
+/* The shared list: what every tier includes, stated once above the cards */
+.package-shared-head {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--w-eyebrow);
+  margin-bottom: 0.75rem;
+}
+
+.package-shared {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  border-top: 1px solid var(--w-rule);
+}
+
+.package-shared-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--w-rule);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--w-claim);
+  max-width: 70ch;
+}
+
+.package-shared-item::before {
+  content: "+";
+  color: var(--emerald);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Monthly price on each tier card */
+.package-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--w-claim);
+}
+
+/* Bonus block: details/summary, open on desktop, closed on a phone (Packages.jsx) */
+.package-bonus {
+  margin-top: 2rem;
+  border-top: 1px solid var(--w-rule);
+  border-bottom: 1px solid var(--w-rule);
+}
+
+.package-bonus-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--w-claim);
+}
+
+.package-bonus-head::-webkit-details-marker {
+  display: none;
+}
+
+.package-bonus-head::after {
+  content: "+";
+  color: var(--emerald);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.package-bonus[open] .package-bonus-head::after {
+  content: "\2212";
+}
+
+.package-bonus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.package-bonus-item {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--w-body);
+  max-width: 70ch;
+}
+
+.package-bonus-item::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--emerald);
+  font-weight: 700;
+}
+
+.package-rates {
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--w-body);
+  max-width: 62ch;
+}
+
+/* The pill after the price: the CTA that matters most */
+.package-cta {
+  margin-top: 2.5rem;
 }
 
 /* Closing line under the Who-it's-for cards */
@@ -1447,4 +1719,16 @@ footer {
 /* FAQ heading fits on one line (overrides the shared section-head width cap) */
 #faq .section-head {
   max-width: none;
+}
+
+/* ===== Mobile overrides for blocks declared BELOW the main 768px media
+   query (About, Packages). Same specificity as their base rules, so source
+   order decides: this block must stay LAST in the file. When it sat above
+   the base rules the three package cards rendered as three columns on a
+   390px screen and the third card was clipped off the right edge. ===== */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-media { min-height: 300px; }
+  .package-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .package-card { padding: 1.5rem; min-width: 0; }
 }

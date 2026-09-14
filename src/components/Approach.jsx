@@ -1,15 +1,15 @@
 const TILES = [
   {
-    title: 'Strength',
-    body: 'Get strong enough that nothing in your day feels heavy.',
+    title: 'Strength through full range',
+    body: 'Mobility is built under weight here, so the range you gain holds when a bigger man is on top of you. Stretching alone does not survive contact.',
   },
   {
-    title: 'Mobility that lasts',
-    body: 'Flexibility built with weights, so it sticks. Stretching alone doesn’t.',
+    title: 'Numbers decide the block',
+    body: 'Every quarter you retest: grip strength, the loads you move, and the range you hold under them. The next block is written from those numbers.',
   },
   {
-    title: 'Fits your life',
-    body: 'A full plan for normal weeks, a short one for busy weeks. You never fall off.',
+    title: 'Built around your week',
+    body: 'A full week when the calendar is normal and a short one when it is not. A trip, a competition, a quarter close: you text the business line, the block changes, and you keep going.',
   },
 ];
 
@@ -24,12 +24,20 @@ export default function Approach() {
           </div>
           <div className="approach-copy">
             <h2 className="claim">
-              Most coaches train symptoms.<br />
-              <span className="highlight--accent">We train systems.</span>
+              Hurt is not harm.<br />
+              <span className="highlight--accent">Telling them apart is my job.</span>
             </h2>
             <p>
-              Aches and injuries usually mean one thing: your body is
-              under-built for what you ask of it. Training fixes that.
+              Most of what your body says during a hard week is hurt, and hurt
+              is a signal you can train with. Harm is a load the tissue cannot
+              carry yet, and it needs a doctor before it needs a coach. You
+              learned that split on the mats: a tight position is uncomfortable
+              and you work through it, a locked armbar is a tap. The rule here
+              is simple. If it settles by the next morning, we keep loading it.
+              If it keeps climbing or shows up somewhere new, I back the load
+              off and you see a doctor before we load it again. You do not make
+              that call alone at 6 a.m. with a full day ahead of you. I make
+              it, on a rule, and the block changes the same day.
             </p>
 
             <div className="approach-tiles">
@@ -42,7 +50,7 @@ export default function Approach() {
             </div>
 
             <a href="#faq" className="approach-link">
-              Six questions to ask any coach, including me &rarr;
+              Seven questions worth asking before you apply &rarr;
             </a>
           </div>
         </div>

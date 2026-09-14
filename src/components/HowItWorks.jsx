@@ -4,22 +4,31 @@ const STEPS = [
   {
     n: '01',
     title: 'Apply',
-    body: 'A short form. Two minutes.',
+    body: 'An application: name, email, phone, a few lines on where you are with training and what you want, and a budget question. The call comes after it, and the call is about you.',
   },
   {
     n: '02',
     title: 'Talk',
-    body: 'A call about your goals, your history, and what you’ve tried.',
+    body: 'A call about what you train, what your week already holds, and what you want to be able to do. We both decide if it is a fit.',
   },
   {
     n: '03',
-    title: 'Assess',
-    body: 'In person or on video. Your program comes from this.',
+    title: 'Test',
+    // OPEN (Chase): does the Hybrid testing session (03) and the quarterly
+    // retest (05) count as that month's in-person session, or sit on top of
+    // it? Not stated here until he answers. When he does, mirror the answer in
+    // Packages.jsx (tier cards) and FAQ 06.
+    body: 'Your first session. On a Hybrid tier it is in person in South Florida; on Remote it runs on video. We put numbers on what you can load and through what range, and the program is built from those numbers.',
   },
   {
     n: '04',
-    title: 'Train and recover',
-    body: 'Your first week of programming arrives within days.',
+    title: 'Train',
+    body: 'I build the block, I tune it as your week changes, and I keep the log. When I am in the room I write it as we go. When I am not, you text me what you lifted and I write it in. You lift. I carry the clipboard.',
+  },
+  {
+    n: '05',
+    title: 'Retest',
+    body: 'Every quarter, in person, or on video if you are remote. The same numbers measured again, and the next block reset against them.',
   },
 ];
 
@@ -27,8 +36,8 @@ export default function HowItWorks() {
   return (
     <section id="how" className="section border-top">
       <div className="container">
-        <span className="label">The Process</span>
-        <h2 className="section-head">How we work.</h2>
+        <span className="label">How it works</span>
+        <h2 className="section-head">You show up. I own the rest.</h2>
         <div className="steps">
           {STEPS.map((s) => (
             <div className="step" key={s.n}>
@@ -41,10 +50,10 @@ export default function HowItWorks() {
         <div className="how-cta">
           <a
             href={CALENDLY_URL}
-          onClick={openCalendly}
+            onClick={openCalendly}
             className="btn-pill btn-pill--primary"
           >
-            Start your application ⊕
+            Apply for a call
           </a>
         </div>
       </div>

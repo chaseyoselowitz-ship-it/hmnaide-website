@@ -1,65 +1,55 @@
 const FAQS = [
   {
     n: '01',
-    q: 'What should I look for when hiring anyone in this space?',
+    q: 'Who decides what I do each session?',
     a: [
-      'A few things worth checking:',
-      'Do they hold real credentials? At minimum, look for the CSCS (Certified Strength and Conditioning Specialist), which is the gold standard for strength coaches. If they don’t have any nationally recognized certs, that’s a red flag.',
-      'Do they actually train and compete themselves, or are they coaching from a textbook?',
-      'Do they personalize the work or hand you the same template they hand everyone else?',
-      'Do they progress you over time, or have you been doing the same three exercises for six months?',
-      'Do they explain what they’re doing and why, or do you just get a list of things to do?',
-      'Are they honest about what they don’t know?',
-      'If the answer to most of those is no, keep looking.',
+      'I do. You get a block built around your week, and you run what is on the sheet. When the week moves, a trip, a comp camp, a quarter close, you text the business line and the block moves with it. You never rebuild it yourself, and you never stand in the gym working out whether today is a heavy day. Every quarter I retest you and write the next block from what the numbers say. Your part is the session in front of you. The thinking around it is mine.',
     ],
   },
   {
     n: '02',
-    q: 'Who do you work with?',
+    q: 'How much of my week does this take?',
     a: [
-      'The work cuts across a wider range than people expect. Most clients fall into one of these:',
-      'Competitive grapplers and combat sport athletes (BJJ, MMA, wrestling)',
-      'Lifters and recreational athletes who want to train hard without breaking down',
-      'Recreational and competitive sports (anything from racquet sports, golf, baseball, surfing, Hyrox, CrossFit, etc.)',
-      'People returning from injury who want to get back to the things they love',
-      'Active people in their 30s, 40s, and 50s who want to stay strong for the long haul',
-      'People who’ve bounced through PT clinics and online programs and are tired of the cycle',
-      'If you’re somewhere in there, we should talk.',
+      'The lifting sits inside the hours you already give to training, mats counted, and how many sessions a week you lift comes out of the time you actually have, which we settle on the call. How many of those I am in the room for is set by the tier: one a month on Hybrid, two a month on Hybrid 2x, none on Remote. The rest you run from the sheet in your own gym. Outside the sessions, the time I ask for is two 30-minute video calls a month. The weekly check-in comes from me, built from the log, and costs you a reply. When a trip or a close eats the week, the block has a short version, so a bad week costs you a shorter session and not the program.',
     ],
   },
   {
     n: '03',
-    q: 'What should I think about before reaching out?',
+    q: 'What do I have to track?',
     a: [
-      'A few things worth getting clear on before the call:',
-      'What you actually want out of this. Get back to a sport? Get stronger? Stop hurting? Get in better shape?',
-      'What you’ve already tried and what didn’t work',
-      'Your injury history, even the stuff you think is healed',
-      'How much time you can realistically give this each week',
-      'Whether you’re looking for someone to tell you what to do, or someone to work with you on the why',
-      'The more honest you are with yourself before the call, the faster we can figure out if it’s a fit.',
+      'No log. I keep it: every load, every set, every range, every session, and the retest numbers on top. You do not fill in a check-in form, rate your sleep in an app, or keep a spreadsheet. Think of it the way you think of your books. They are yours, you can see them the moment you ask, and you still do not keep them yourself. What I do need is one text after any session I am not at, with what you lifted, so it goes in the log. On Remote that is every session. Add a word if something felt different.',
     ],
   },
   {
     n: '04',
-    q: 'Do you work with people who are currently injured?',
+    q: 'Something hurts right now. Can I still start?',
     a: [
-      'Depends on what’s going on. If you’re in acute pain or recently injured and haven’t been cleared by a clinician, that’s a clinical question, not a coaching one. Get evaluated first, then come back. If you’re past the acute stage and trying to rebuild, that’s where I can help.',
+      'It depends on who has looked at it, and that is the first thing I ask. If a physician or another licensed provider has seen it and cleared you, we start, and the block is built around what they said. If you are still under their care, we train what is not involved, stay inside what they told you, and I send them a short note on what I am loading. If nobody has seen it, apply for the call anyway and tell me what is going on. I will point you to someone who can look at it, and we start the day you are cleared.',
+      'I do not decide what is wrong with you. Someone licensed does that, and I build the capacity around it. Anything that swelled, gave way, went numb, or is getting worse day over day gets seen before it gets loaded, and I will say so on the call.',
     ],
-    capture: 'Not cleared yet? Leave your email and I’ll check back in when you are.',
+    capture: 'Not cleared yet? Tell me, and I will check back in when you are.',
+    captureHref: '/contact-us?about=cleared',
   },
   {
     n: '05',
-    q: 'Do I need to have lifted before?',
+    q: 'How do you know when to push and when to back off?',
     a: [
-      'No. Some of the most rewarding work I do is with people who are starting from scratch or coming back to it after years away. If you’ve never touched a barbell, that’s fine. We’ll teach you. If you’ve been lifting for a decade, we’ll meet you where you are.',
+      'By keeping hurt and harm apart, and by not reading it off how you feel walking in. Hurt is your body reporting it was asked for more than it had built. It eases as you warm up, it settles by the next morning, and it gets loaded, at the edge and just under it, until the edge moves. Harm carries its own tells: swelling, a joint that gives, numbness, something that climbs over days instead of settling. Harm sees a doctor before it sees a bar. What gets loaded today, what waits, and when the answer is a doctor first: that is a training call, and I make it, in the room or over the phone, in plain words. Naming what is wrong is not my call, and I will not pretend it is. What you can load, through what range, from one retest to the next, tells me more than a pain rating ever will.',
     ],
   },
   {
     n: '06',
-    q: 'What’s the difference between the packages?',
+    q: 'What does it cost, and what am I committing to?',
     a: [
-      'The assessment decides the program; the package decides how much of me you get.',
+      'Remote is $515 a month. Hybrid, with one in-person session a month, is $685. Hybrid with two in-person sessions a month is $850. Every tier is the same program, the same log, and the same quarterly retest; the testing session decides the block, and the tier decides how often I am in the room with you in South Florida. Look, these are founding rates. The first clients through go before the retest numbers exist, and their retests become the numbers the people after them read before they decide.',
+      'On commitment, plan on a quarter. The first retest is the first point where the numbers can tell either of us whether it is working, and nothing shorter gives them time to move.',
+    ],
+  },
+  {
+    n: '07',
+    q: 'Remote or in person?',
+    a: [
+      'If you are in Boca, Palm Beach, or Broward, take a Hybrid tier. The in-person session is where I watch you under load and change things on the spot. Two a month puts the most of me in the room; one a month works when the calls and the text line can carry the weeks between. Remote is for the man outside South Florida, or the one who travels to compete more than he is home. The first session runs on video and the block is the same. Which one fits you is the last thing we settle on the call, and you do not need to know before you apply.',
     ],
   },
 ];
@@ -83,7 +73,10 @@ export default function FAQ() {
                   <p key={j}>{line}</p>
                 ))}
                 {f.capture && (
-                  <a className="faq-capture" href="/contact-us">
+                  <a
+                    className="faq-capture"
+                    href={f.captureHref || '/contact-us'}
+                  >
                     {f.capture}
                   </a>
                 )}
