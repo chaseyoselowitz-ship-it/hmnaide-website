@@ -3,12 +3,6 @@ import Footer from './Footer';
 import { TESTIMONIALS } from '../testimonials.js';
 import { CALENDLY_URL, openCalendly } from '../calendly.js';
 
-const INCLUDED = [
-  'Four 1:1 sessions a month',
-  'Starts with a full first session where we test how you move',
-  'A program built from what we find. Nothing pre-written.',
-];
-
 // Video testimonials, matched to the homepage quotes by name so the
 // headline and role stay in one place (testimonials.js).
 const VIDEOS = [
@@ -57,17 +51,7 @@ export default function Pricing() {
             </div>
 
             <div className="offer-body">
-              <ul className="offer-list">
-                {INCLUDED.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <div className="offer-cta">
-                <JoinButton />
-                <p className="offer-note">
-                  Starts with a free call. Pick a time that works for you.
-                </p>
-              </div>
+              <JoinButton />
             </div>
           </section>
 
