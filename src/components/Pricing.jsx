@@ -74,7 +74,7 @@ export default function Pricing() {
                   </a>
                 </div>
                 <p className="offer-note">
-                  Starts with a call. Pick a time that works for you.
+                  Starts with a free call. Pick a time that works for you.
                 </p>
               </div>
             </div>
