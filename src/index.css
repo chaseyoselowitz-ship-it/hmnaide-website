@@ -166,6 +166,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.25s ease, padding 0.25s ease, border-color 0.25s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Scrolled: a dark backing so the header never sits on top of body copy */
+header.is-scrolled {
+  background: rgba(0, 0, 0, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Wordmark — logo face is 700, tight tracking */
@@ -955,44 +967,6 @@ footer {
   align-items: flex-start;
 }
 
-/* What you won't get here */
-.wontget {
-  padding: 5rem 0;
-  background: var(--bg-color);
-  position: relative;
-  z-index: 5;
-}
-
-.wontget-list {
-  list-style: none;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.wontget-item {
-  display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--w-rule);
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 500;
-  color: var(--w-claim);
-}
-
-.wontget-item:first-child {
-  border-top: 1px solid var(--w-rule);
-}
-
-.wontget-x {
-  color: var(--emerald);
-  font-weight: 700;
-  font-size: 1.1em;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
 /* Testimonial stat pull-outs + kicker */
 .section-kicker {
   margin: -2rem 0 3rem;
@@ -1012,45 +986,6 @@ footer {
   font-weight: 800;
   line-height: 1.25;
   color: var(--w-claim);
-}
-
-/* How it works — numbered steps */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.step {
-  border-top: 1px solid var(--w-rule);
-  padding-top: 1.25rem;
-}
-
-.step-n {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--emerald);
-  margin-bottom: 0.75rem;
-}
-
-.step-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.step-body {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--w-body);
-}
-
-.how-cta {
-  margin-top: 3.5rem;
 }
 
 /* Who it's for — three cards */
@@ -1122,7 +1057,6 @@ footer {
 
 @media (max-width: 900px) {
   .tcard-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1138,8 +1072,14 @@ footer {
   .hero-title { font-size: clamp(2.5rem, 13vw, 4rem); }
   .hero-sub { font-size: 1.15rem; max-width: 100%; }
   .grid { display: flex; flex-direction: column; }
-  /* mobile: keep only the Apply CTA in the sticky header, hide the rest */
+  /* mobile: keep only the Book your call CTA in the sticky header, hide the rest */
   .nav-group a:not(.nav-apply) { display: none; }
+  header { padding: 1.25rem; gap: 0.75rem; }
+  .nav-apply {
+    white-space: nowrap;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.75rem;
+  }
   .big-copy { font-size: 1.5rem; }
   .stat-grid { flex-direction: column; gap: 2rem; }
   .section { padding: 5rem 0; }
@@ -1148,7 +1088,6 @@ footer {
   .approach-tiles { grid-template-columns: 1fr; gap: 1.25rem; }
   .tcard-grid { grid-template-columns: 1fr; }
   .result-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   /* workshop photo: force a compact, centered size on mobile (portrait 826x1200) */
   .workshops-media .workshops-img {
@@ -1373,7 +1312,7 @@ footer {
 /* ===== Packages ===== */
 .package-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -1442,6 +1381,59 @@ footer {
   max-width: none;
 }
 
+/* ===== Mobile pass =====
+   Most traffic is phones (Instagram), so these tune spacing, tap targets
+   and small type for narrow screens. Desktop is untouched. */
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .section-head { margin-bottom: 2rem; }
+  header.is-scrolled { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+  /* hero: the main button is a real, thumb-sized button on phones */
+  .hero .link-small {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.8rem;
+    border-radius: 999px;
+  }
+  .hero-sub { margin-bottom: 2rem; }
+
+  /* social proof tags were 10px */
+  .proof-pill { font-size: 0.72rem; }
+
+  /* About credentials: a clean ruled list instead of wrapping pills */
+  .about-creds {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.5rem;
+  }
+  .about-cred {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid var(--w-divider);
+    padding: 0.85rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .about-cred:last-child { border-bottom: 1px solid var(--w-divider); }
+
+  /* Workshops: full-width photo crop, tighter copy stack */
+  .workshops-media { width: 100%; }
+  .workshops-media .workshops-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 12px;
+  }
+  .workshops-copy { gap: 1rem; }
+  .workshops-copy .rule-accent { margin-top: 0; }
+
+  /* Footer: links tall enough to tap */
+  .footer-col { gap: 0; }
+  .footer-link { padding: 0.6rem 0; }
+  .footer-header { margin-bottom: 0.25rem; }
+}
+
 /* ===== Mobile overrides that must outrank later base rules =====
    The main @media (max-width: 768px) block sits above the About and Packages
    sections, so their base declarations (same specificity, later in the file)
@@ -1457,7 +1449,8 @@ footer {
   /* fixed crop box instead of stretching to the copy column's height */
   .about-media {
     min-height: 0;
-    height: 380px;
+    aspect-ratio: 4 / 5;
+    max-height: 460px;
   }
   /* bias the crop toward the face rather than the top of the frame */
   .about-photo {
@@ -1465,6 +1458,176 @@ footer {
   }
   .package-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Events page ===== */
+.events-page {
+  padding: 8rem 0 6rem;
+}
+
+.events-head {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.events-intro {
+  max-width: 46ch;
+  margin: 1.5rem 0 4rem;
+  font-size: 1.05rem;
+  color: var(--w-body);
+}
+
+/* Month groups + rows */
+.event-group {
+  margin-bottom: 4rem;
+}
+
+.event-group-head {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--w-eyebrow);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--w-rule);
+}
+
+.event-list {
+  list-style: none;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--w-divider);
+}
+
+/* the host-a-workshop rule below already closes the list */
+.event-group:last-of-type .event-row:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-day {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.event-day--tba {
+  font-size: 1.5rem;
+  color: var(--w-eyebrow);
+}
+
+.event-dow {
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--w-eyebrow);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--w-body);
+}
+
+.event-title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.1;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.event-place {
+  color: var(--w-body);
+  font-size: 1rem;
+}
+
+.event-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 4px 10px;
+  border: 1px solid var(--w-rule);
+  border-radius: 999px;
+  color: var(--w-body);
+}
+
+.event-tag--open {
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.event-note {
+  font-size: 0.85rem;
+  color: var(--w-eyebrow);
+  text-align: right;
+}
+
+.events-empty {
+  color: var(--w-body);
+  margin-bottom: 4rem;
+}
+
+.events-empty a {
+  color: var(--emerald);
+}
+
+/* Host-a-workshop CTA at the foot of the list */
+.events-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.events-host-copy {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 28ch;
+}
+
+@media (max-width: 860px) {
+  .event-row {
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .event-day { font-size: 2.25rem; }
+  .event-actions,
+  .event-note {
+    grid-column: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .event-actions .btn-pill { padding: 0.65rem 1.25rem; }
+  .events-host {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
