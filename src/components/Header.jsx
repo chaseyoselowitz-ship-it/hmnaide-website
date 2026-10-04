@@ -16,13 +16,14 @@ export default function Header() {
 
   return (
     <header>
-      <a href="/" className="logo-link" aria-label="HMN AIDE — home">
+      <a href="/" className="logo-link" aria-label="HMN AIDE home">
         <Logo size={56} variant="white" />
       </a>
       <nav className="nav-group">
         <a href="/#approach" className="btn-pill">Approach</a>
         <a href="/#results" className="btn-pill">Results</a>
         <a href="/#who" className="btn-pill">Who it&rsquo;s for</a>
+        <a href="/events" className="btn-pill">Events</a>
         <a href="https://hmnaide.substack.com/" className="btn-pill">
           Newsletter
         </a>

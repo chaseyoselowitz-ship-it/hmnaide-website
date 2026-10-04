@@ -60,7 +60,7 @@ export default function ContactUs() {
                 <div className="contact-success">
                   <p className="contact-success-title">Message sent.</p>
                   <p>
-                    Thanks for reaching out &mdash; you&rsquo;ll hear back soon.
+                    Thanks for reaching out. You&rsquo;ll hear back soon.
                   </p>
                 </div>
               ) : (
