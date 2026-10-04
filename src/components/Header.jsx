@@ -4,7 +4,7 @@ import { CALENDLY_URL, openCalendly } from '../calendly.js'
 export default function Header() {
   return (
     <header>
-      <a href="/" className="logo-link" aria-label="HMN AIDE — home">
+      <a href="/" className="logo-link" aria-label="HMN AIDE home">
         <Logo size={56} variant="white" />
       </a>
       <nav className="nav-group">
