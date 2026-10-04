@@ -9,7 +9,7 @@ const STEPS = [
   {
     n: '02',
     title: 'Talk',
-    body: 'A call about your goals, your history, and what you’ve tried.',
+    body: 'A free call about your goals, your history, and what you’ve tried.',
   },
   {
     n: '03',
