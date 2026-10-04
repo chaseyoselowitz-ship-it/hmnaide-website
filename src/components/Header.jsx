@@ -14,6 +14,7 @@ export default function Header() {
         <a href="https://hmnaide.substack.com/" className="btn-pill">
           Newsletter
         </a>
+        <a href="/pricing" className="btn-pill">Pricing</a>
         <a
           href={CALENDLY_URL}
           onClick={openCalendly}

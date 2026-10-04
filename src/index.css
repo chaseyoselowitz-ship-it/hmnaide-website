@@ -1467,3 +1467,202 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Pricing page ===== */
+.pricing-page {
+  padding: 8rem 0 6rem;
+}
+
+.pricing-head {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.pricing-intro {
+  max-width: 46ch;
+  margin: 1.5rem 0 4rem;
+  font-size: 1.05rem;
+  color: var(--w-body);
+}
+
+/* Founding membership offer: two price columns over a checklist */
+.offer {
+  border: 1px solid var(--w-rule);
+  border-radius: 12px;
+  margin-bottom: 6rem;
+}
+
+.offer-prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.offer-price {
+  padding: 2.5rem;
+}
+
+.offer-price + .offer-price {
+  border-left: 1px solid var(--w-divider);
+}
+
+.offer-when {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--emerald);
+}
+
+.offer-amount {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 1rem 0 0.75rem;
+}
+
+.offer-per {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--w-body);
+  margin-left: 0.25rem;
+}
+
+.offer-detail {
+  color: var(--w-body);
+}
+
+.offer-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-top: 1px solid var(--w-divider);
+}
+
+.offer-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.offer-list li {
+  display: flex;
+  gap: 0.75rem;
+  color: var(--w-claim);
+}
+
+.offer-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1rem;
+  height: 2px;
+  margin-top: 0.65em;
+  background: var(--emerald);
+}
+
+.offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.offer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.offer-note {
+  font-size: 0.85rem;
+  color: var(--w-eyebrow);
+}
+
+/* Video testimonials */
+.vtest {
+  padding-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.vtest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vtest-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.vtest-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--tint);
+  display: block;
+}
+
+.vtest-cap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vtest-cap .tcard-headline {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.pricing-close-copy {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 28ch;
+}
+
+@media (max-width: 860px) {
+  .offer-prices {
+    grid-template-columns: 1fr;
+  }
+  .offer-price {
+    padding: 2rem 1.5rem;
+  }
+  .offer-price + .offer-price {
+    border-left: none;
+    border-top: 1px solid var(--w-divider);
+  }
+  .offer-body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+  }
+  .offer-cta {
+    align-items: flex-start;
+  }
+  .offer-actions {
+    justify-content: flex-start;
+  }
+  .vtest-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+  .pricing-close {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
