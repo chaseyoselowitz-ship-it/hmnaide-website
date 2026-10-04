@@ -25,10 +25,12 @@ export default function About() {
           <div className="about-copy">
             <h2 className="section-head">Why I built this.</h2>
             <p>
-              In 2022 I blew my back out training for Pan Ams. The ER found
-              nothing wrong, gave me pain meds, and sent me home. What got me
-              back wasn&rsquo;t rest. It was training: progressive load, week
-              after week.
+              Movement has been my thing my whole life, and martial arts is
+              where it all started. In 2022, training for Pan Ams, I hurt my
+              back badly and the usual treatment routes didn&rsquo;t help. The
+              ER found nothing wrong, gave me pain meds, and sent me home. What
+              got me back wasn&rsquo;t rest. It was training: progressive load,
+              week after week.
             </p>
             <p>
               Most trainers are afraid of injuries. Most clinics are afraid of
