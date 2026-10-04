@@ -1,0 +1,80 @@
+# Makes sure the site's Calendly booking link always works.
+#
+# Every hour it checks the link in the code and the link on the live site:
+# the page loads, the event is bookable, and there are open times. If any of
+# that fails it opens a "booking-link-broken" issue (which emails Chase and
+# Liz), and closes the issue again once the link works.
+#
+# On pull requests it checks the link in the code only, so a PR that
+# changes the link to a broken one fails before it can be merged.
+name: Booking link check
+
+on:
+  schedule:
+    - cron: '17 * * * *' # hourly
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: booking-link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The live site is only checked on the schedule: right after a push,
+      # Vercel may still be deploying and the old link would still be live.
+      - name: Check booking link
+        run: |
+          set -o pipefail
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            node scripts/check-booking-link.mjs --live https://www.hmnaide.clinic | tee result.txt
+          else
+            node scripts/check-booking-link.mjs | tee result.txt
+          fi
+
+      - name: Open an issue if it broke
+        if: failure() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create booking-link-broken --color B60205 \
+            --description "The site's Calendly booking link is not working" 2>/dev/null || true
+          open=$(gh issue list --label booking-link-broken --state open --json number --jq '.[0].number')
+          if [ -z "$open" ]; then
+            {
+              echo "@chaseyoselowitz-ship-it @lizyoselowitz-a11y the booking link on the site is not working, so visitors cannot book a call."
+              echo
+              echo '```'
+              cat result.txt
+              echo '```'
+              echo
+              echo "Fix: update \`CALENDLY_URL\` in \`src/calendly.js\` (or turn the event back on in Calendly)."
+              echo "This issue closes itself once the hourly check passes again."
+              echo
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            } > body.md
+            gh issue create --title "Booking link is broken" --label booking-link-broken --body-file body.md
+          fi
+
+      - name: Close the issue once it works again
+        if: success() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --label booking-link-broken --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "The booking link works again: $(head -1 result.txt)"
+          done
