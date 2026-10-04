@@ -29,7 +29,7 @@ export default function Approach() {
             </h2>
             <p>
               Aches and injuries usually mean one thing: your body is
-              under-built for what you ask of it. Training fixes that.
+              under-built for what you ask of it. Training builds it up.
             </p>
 
             <div className="approach-tiles">

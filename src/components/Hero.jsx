@@ -9,8 +9,8 @@ export default function Hero() {
         <span className="label">HMN AIDE · pronounced: human aid</span>
         <h1 className="hero-title">REALLY GOOD<br />RECOVERY.</h1>
         <p className="hero-sub">
-          Aches, injuries, and slow recovery don&rsquo;t fix themselves with
-          rest. You train your way out. Custom 1:1 strength and mobility
+          Rest alone won&rsquo;t get you past aches, injuries, and slow
+          recovery. You train your way out. Custom 1:1 strength and mobility
           coaching, for everyday athletes up to world champions.
         </p>
         <div className="hero-ctas">
