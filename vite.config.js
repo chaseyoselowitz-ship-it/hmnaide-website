@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 // Multi-page build: the marketing landing (index.html), the standalone
-// contact page (contact-us.html) and the events page (events.html).
+// contact page (contact-us.html), the events page (events.html) and the
+// pricing page (pricing.html).
 // Paths are relative to the project root.
 export default defineConfig({
   plugins: [react()],
@@ -13,6 +14,7 @@ export default defineConfig({
         main: 'index.html',
         contact: 'contact-us.html',
         events: 'events.html',
+        pricing: 'pricing.html',
       },
     },
   },
