@@ -1471,3 +1471,173 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Events page ===== */
+.events-page {
+  padding: 8rem 0 6rem;
+}
+
+.events-head {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.events-intro {
+  max-width: 46ch;
+  margin: 1.5rem 0 4rem;
+  font-size: 1.05rem;
+  color: var(--w-body);
+}
+
+/* Month groups + rows */
+.event-group {
+  margin-bottom: 4rem;
+}
+
+.event-group-head {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--w-eyebrow);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--w-rule);
+}
+
+.event-list {
+  list-style: none;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--w-divider);
+}
+
+/* the host-a-workshop rule below already closes the list */
+.event-group:last-of-type .event-row:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-day {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.event-day--tba {
+  font-size: 1.5rem;
+  color: var(--w-eyebrow);
+}
+
+.event-dow {
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--w-eyebrow);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--w-body);
+}
+
+.event-title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.1;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.event-place {
+  color: var(--w-body);
+  font-size: 1rem;
+}
+
+.event-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 4px 10px;
+  border: 1px solid var(--w-rule);
+  border-radius: 999px;
+  color: var(--w-body);
+}
+
+.event-tag--open {
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.event-note {
+  font-size: 0.85rem;
+  color: var(--w-eyebrow);
+  text-align: right;
+}
+
+.events-empty {
+  color: var(--w-body);
+  margin-bottom: 4rem;
+}
+
+.events-empty a {
+  color: var(--emerald);
+}
+
+/* Host-a-workshop CTA at the foot of the list */
+.events-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.events-host-copy {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 28ch;
+}
+
+@media (max-width: 860px) {
+  .event-row {
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .event-day { font-size: 2.25rem; }
+  .event-actions,
+  .event-note {
+    grid-column: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .event-actions .btn-pill { padding: 0.65rem 1.25rem; }
+  .events-host {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
