@@ -170,6 +170,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.25s ease, padding 0.25s ease, border-color 0.25s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Scrolled: a dark backing so the header never sits on top of body copy */
+header.is-scrolled {
+  background: rgba(0, 0, 0, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Wordmark — logo face is 700, tight tracking */
@@ -959,44 +971,6 @@ footer {
   align-items: flex-start;
 }
 
-/* What you won't get here */
-.wontget {
-  padding: 5rem 0;
-  background: var(--bg-color);
-  position: relative;
-  z-index: 5;
-}
-
-.wontget-list {
-  list-style: none;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.wontget-item {
-  display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--w-rule);
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 500;
-  color: var(--w-claim);
-}
-
-.wontget-item:first-child {
-  border-top: 1px solid var(--w-rule);
-}
-
-.wontget-x {
-  color: var(--emerald);
-  font-weight: 700;
-  font-size: 1.1em;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
 /* Testimonial stat pull-outs + kicker */
 .section-kicker {
   margin: -2rem 0 3rem;
@@ -1016,45 +990,6 @@ footer {
   font-weight: 800;
   line-height: 1.25;
   color: var(--w-claim);
-}
-
-/* How it works — numbered steps */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.step {
-  border-top: 1px solid var(--w-rule);
-  padding-top: 1.25rem;
-}
-
-.step-n {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--emerald);
-  margin-bottom: 0.75rem;
-}
-
-.step-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.step-body {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--w-body);
-}
-
-.how-cta {
-  margin-top: 3.5rem;
 }
 
 /* Who it's for — three cards */
@@ -1126,7 +1061,6 @@ footer {
 
 @media (max-width: 900px) {
   .tcard-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1158,7 +1092,6 @@ footer {
   .approach-tiles { grid-template-columns: 1fr; gap: 1.25rem; }
   .tcard-grid { grid-template-columns: 1fr; }
   .result-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   /* workshop photo: force a compact, centered size on mobile (portrait 826x1200) */
   .workshops-media .workshops-img {
@@ -1383,7 +1316,7 @@ footer {
 /* ===== Packages ===== */
 .package-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -1452,6 +1385,59 @@ footer {
   max-width: none;
 }
 
+/* ===== Mobile pass =====
+   Most traffic is phones (Instagram), so these tune spacing, tap targets
+   and small type for narrow screens. Desktop is untouched. */
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .section-head { margin-bottom: 2rem; }
+  header.is-scrolled { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+  /* hero: the main button is a real, thumb-sized button on phones */
+  .hero .link-small {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.8rem;
+    border-radius: 999px;
+  }
+  .hero-sub { margin-bottom: 2rem; }
+
+  /* social proof tags were 10px */
+  .proof-pill { font-size: 0.72rem; }
+
+  /* About credentials: a clean ruled list instead of wrapping pills */
+  .about-creds {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.5rem;
+  }
+  .about-cred {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid var(--w-divider);
+    padding: 0.85rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .about-cred:last-child { border-bottom: 1px solid var(--w-divider); }
+
+  /* Workshops: full-width photo crop, tighter copy stack */
+  .workshops-media { width: 100%; }
+  .workshops-media .workshops-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 12px;
+  }
+  .workshops-copy { gap: 1rem; }
+  .workshops-copy .rule-accent { margin-top: 0; }
+
+  /* Footer: links tall enough to tap */
+  .footer-col { gap: 0; }
+  .footer-link { padding: 0.6rem 0; }
+  .footer-header { margin-bottom: 0.25rem; }
+}
+
 /* ===== Mobile overrides that must outrank later base rules =====
    The main @media (max-width: 768px) block sits above the About and Packages
    sections, so their base declarations (same specificity, later in the file)
@@ -1467,7 +1453,8 @@ footer {
   /* fixed crop box instead of stretching to the copy column's height */
   .about-media {
     min-height: 0;
-    height: 380px;
+    aspect-ratio: 4 / 5;
+    max-height: 460px;
   }
   /* bias the crop toward the face rather than the top of the frame */
   .about-photo {

@@ -1,7 +1,19 @@
+import { useEffect } from 'react';
 import Logo from './Logo';
 import { CALENDLY_URL, openCalendly } from '../calendly.js'
 
 export default function Header() {
+  // The header is fixed and transparent over the hero. Once the page scrolls
+  // it gets a dark backing (header.is-scrolled) so it never sits on top of
+  // body copy.
+  useEffect(() => {
+    const header = document.querySelector('header');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <header>
       <a href="/" className="logo-link" aria-label="HMN AIDE — home">
