@@ -20,14 +20,14 @@ export default function Header() {
         <Logo size={56} variant="white" />
       </a>
       <nav className="nav-group">
-        <a href="/#approach" className="btn-pill">Approach</a>
-        <a href="/#results" className="btn-pill">Results</a>
-        <a href="/#who" className="btn-pill">Who it&rsquo;s for</a>
-        <a href="/events" className="btn-pill">Events</a>
-        <a href="https://hmnaide.substack.com/" className="btn-pill">
+        <a href="/pricing" className="btn-pill">Pricing</a>
+        <a href="/#approach" className="btn-pill nav-hide-sm">Approach</a>
+        <a href="/#results" className="btn-pill nav-hide-sm">Results</a>
+        <a href="/#who" className="btn-pill nav-hide-md">Who it&rsquo;s for</a>
+        <a href="/events" className="btn-pill nav-hide-sm">Events</a>
+        <a href="https://hmnaide.substack.com/" className="btn-pill nav-hide-md">
           Newsletter
         </a>
-        <a href="/pricing" className="btn-pill">Pricing</a>
         <a
           href={CALENDLY_URL}
           onClick={openCalendly}
