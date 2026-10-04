@@ -39,10 +39,6 @@ export default function Pricing() {
           <p className="label">Founding Members</p>
           <h1 className="section-head pricing-head">Founding membership.</h1>
           <div className="rule-accent" />
-          <p className="pricing-intro">
-            HMN AIDE is launching. Our first clients join at founding member
-            rates.
-          </p>
 
           <section className="offer" aria-label="Founding membership rates">
             <div className="offer-prices">

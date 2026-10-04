@@ -1641,11 +1641,8 @@ footer {
   margin-bottom: 0;
 }
 
-.pricing-intro {
-  max-width: 46ch;
-  margin: 1.5rem 0 4rem;
-  font-size: 1.05rem;
-  color: var(--w-body);
+.pricing-page .rule-accent {
+  margin-bottom: 3rem;
 }
 
 /* Founding membership offer: two price columns over a checklist */
