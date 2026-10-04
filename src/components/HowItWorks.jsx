@@ -3,8 +3,8 @@ import { CALENDLY_URL, openCalendly } from '../calendly.js'
 const STEPS = [
   {
     n: '01',
-    title: 'Apply',
-    body: 'A short form. Two minutes.',
+    title: 'Book',
+    body: 'Pick a time and fill in a short form. Two minutes.',
   },
   {
     n: '02',
@@ -44,7 +44,7 @@ export default function HowItWorks() {
           onClick={openCalendly}
             className="btn-pill btn-pill--primary"
           >
-            Start your application ⊕
+            Book your call ⊕
           </a>
         </div>
       </div>

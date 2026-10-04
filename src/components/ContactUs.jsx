@@ -52,7 +52,7 @@ export default function ContactUs() {
                   href={CALENDLY_URL}
                   onClick={openCalendly}
                 >
-                  Apply here.
+                  Book a call.
                 </a>
               </p>
 

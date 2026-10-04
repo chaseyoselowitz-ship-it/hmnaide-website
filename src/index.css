@@ -1142,7 +1142,7 @@ footer {
   .hero-title { font-size: clamp(2.5rem, 13vw, 4rem); }
   .hero-sub { font-size: 1.15rem; max-width: 100%; }
   .grid { display: flex; flex-direction: column; }
-  /* mobile: keep only the Apply CTA in the sticky header, hide the rest */
+  /* mobile: keep only the Book a call CTA in the sticky header, hide the rest */
   .nav-group a:not(.nav-apply) { display: none; }
   .big-copy { font-size: 1.5rem; }
   .stat-grid { flex-direction: column; gap: 2rem; }

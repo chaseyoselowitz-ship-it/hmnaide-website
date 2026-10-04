@@ -18,7 +18,7 @@ export default function Hero() {
           onClick={openCalendly}
           className="link-small link-small--primary"
         >
-          START YOUR APPLICATION ⊕
+          BOOK YOUR CALL ⊕
         </a>
         <span className="hero-micro">
           South Florida in person · Worldwide remote

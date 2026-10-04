@@ -1,4 +1,4 @@
-// Calendly booking popup. Every "apply" / "book" CTA on the site goes here.
+// Calendly booking popup. Every "book a call" CTA on the site goes here.
 // Buttons keep a real href so the link still works if the Calendly script
 // has not loaded yet (slow network, script blocked): it just opens the
 // booking page in the same tab instead of the popup.
