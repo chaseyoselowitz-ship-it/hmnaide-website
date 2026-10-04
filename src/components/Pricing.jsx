@@ -5,8 +5,8 @@ import { CALENDLY_URL, openCalendly } from '../calendly.js';
 
 const INCLUDED = [
   'Four 1:1 sessions a month',
-  'Starts with a full assessment',
-  'A program built from your assessment. Nothing pre-written.',
+  'Starts with a full first session where we test how you move',
+  'A program built from what we find. Nothing pre-written.',
   '3-month commitment',
 ];
 
@@ -107,7 +107,7 @@ export default function Pricing() {
 
           <section className="pricing-close border-top">
             <p className="pricing-close-copy">
-              Every membership starts with the same assessment.
+              Every membership starts the same way.
             </p>
             <JoinButton />
           </section>
