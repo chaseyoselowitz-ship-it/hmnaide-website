@@ -7,7 +7,6 @@ const INCLUDED = [
   'Four 1:1 sessions a month',
   'Starts with a full first session where we test how you move',
   'A program built from what we find. Nothing pre-written.',
-  '3-month commitment',
 ];
 
 // Video testimonials, matched to the homepage quotes by name so the
@@ -39,10 +38,6 @@ export default function Pricing() {
           <p className="label">Founding Members</p>
           <h1 className="section-head pricing-head">Founding membership.</h1>
           <div className="rule-accent" />
-          <p className="pricing-intro">
-            HMN AIDE is launching. Our first clients join at founding member
-            rates.
-          </p>
 
           <section className="offer" aria-label="Founding membership rates">
             <div className="offer-prices">
@@ -54,9 +49,10 @@ export default function Pricing() {
               <div className="offer-price">
                 <span className="offer-when">Month 2 onward</span>
                 <p className="offer-amount">
-                  $480<span className="offer-per">/month</span>
+                  $600<span className="offer-per">/month</span>
                 </p>
-                <p className="offer-detail">4 sessions · $120 per session</p>
+                <p className="offer-detail">4 sessions · $150 per session</p>
+                <p className="offer-term">Requires a 3-month commitment</p>
               </div>
             </div>
 
@@ -67,12 +63,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <div className="offer-cta">
-                <div className="offer-actions">
-                  <JoinButton />
-                  <a href="/#faq" className="btn-pill">
-                    Read FAQs
-                  </a>
-                </div>
+                <JoinButton />
                 <p className="offer-note">
                   Starts with a free call. Pick a time that works for you.
                 </p>
@@ -103,13 +94,6 @@ export default function Pricing() {
                 </figure>
               ))}
             </div>
-          </section>
-
-          <section className="pricing-close border-top">
-            <p className="pricing-close-copy">
-              Every membership starts the same way.
-            </p>
-            <JoinButton />
           </section>
         </div>
       </main>

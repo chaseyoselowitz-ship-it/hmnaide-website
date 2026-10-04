@@ -214,6 +214,24 @@ header.is-scrolled {
   gap: 1rem;
 }
 
+/* Seven pills only fit on wide screens. On laptops and tablets the pills
+   get compact, then the secondary ones drop out so Pricing and Book your
+   call always stay visible and on one line. */
+@media (max-width: 1280px) {
+  .nav-group { gap: 0.5rem; }
+  .nav-group .btn-pill {
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1100px) {
+  .nav-group .nav-hide-md { display: none; }
+}
+@media (max-width: 900px) {
+  .nav-group .nav-hide-sm { display: none; }
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -1641,11 +1659,8 @@ footer {
   margin-bottom: 0;
 }
 
-.pricing-intro {
-  max-width: 46ch;
-  margin: 1.5rem 0 4rem;
-  font-size: 1.05rem;
-  color: var(--w-body);
+.pricing-page .rule-accent {
+  margin-bottom: 3rem;
 }
 
 /* Founding membership offer: two price columns over a checklist */
@@ -1696,6 +1711,20 @@ footer {
   color: var(--w-body);
 }
 
+/* The condition attached to a price (e.g. the 3-month commitment) */
+.offer-term {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--emerald);
+  border-radius: 999px;
+  color: var(--emerald);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .offer-body {
   display: flex;
   justify-content: space-between;
@@ -1726,13 +1755,6 @@ footer {
   background: var(--emerald);
 }
 
-.offer-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: flex-end;
-}
-
 .offer-cta {
   display: flex;
   flex-direction: column;
@@ -1748,7 +1770,6 @@ footer {
 /* Video testimonials */
 .vtest {
   padding-top: 4rem;
-  margin-bottom: 6rem;
 }
 
 .vtest-grid {
@@ -1783,21 +1804,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.pricing-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding-top: 3rem;
-}
-
-.pricing-close-copy {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 800;
-  line-height: 1.15;
-  max-width: 28ch;
-}
-
 @media (max-width: 860px) {
   .offer-prices {
     grid-template-columns: 1fr;
@@ -1817,15 +1823,8 @@ footer {
   .offer-cta {
     align-items: flex-start;
   }
-  .offer-actions {
-    justify-content: flex-start;
-  }
   .vtest-grid {
     grid-template-columns: 1fr;
     max-width: 360px;
-  }
-  .pricing-close {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
