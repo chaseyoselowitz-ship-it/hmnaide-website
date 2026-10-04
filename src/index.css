@@ -1399,6 +1399,80 @@ footer {
   max-width: none;
 }
 
+/* ===== Emerald accents =====
+   Solid emerald only, per the brand kit: one surface tint, one full band,
+   and emerald marks on the cards, numbers and headline beats, so the page
+   picks up green at a steady rhythm instead of only at the top. */
+
+/* Near-black emerald surface (Packages) */
+.section--tint {
+  background: var(--tint);
+}
+
+/* Full emerald band (Workshops): ink type and ink buttons on green */
+.section--emerald {
+  background: var(--emerald);
+  color: var(--ink);
+}
+.section--emerald .label { color: var(--emerald-ink); }
+.section--emerald .rule-accent { background: var(--ink); }
+.section--emerald .workshops-copy p {
+  color: var(--ink);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 22ch;
+}
+.section--emerald .workshops-img { border-radius: 12px; }
+.workshops-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.btn-pill--ink {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.btn-pill--ink:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+.btn-pill--outline-ink {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-pill--outline-ink:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* Packages: big emerald index numbers, emerald edge on hover */
+.package-n {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.package-card { transition: border-color 0.2s; }
+.package-card:hover { border-color: var(--emerald); }
+
+/* Who it's for: an emerald top edge on each card */
+.who-card { border-top: 3px solid var(--emerald); }
+
+/* Testimonials: emerald edge on hover */
+.tcard { transition: border-color 0.2s; }
+.tcard:hover { border-color: var(--emerald); }
+
+/* FAQ: emerald numbers and plus marks */
+.faq-n { color: var(--emerald); }
+.faq-mark::before,
+.faq-mark::after { background: var(--emerald); }
+
+/* Hero "See pricing" link: phones only (desktop has the Pricing nav pill) */
+.hero-pricing { display: none; }
+
 /* ===== Mobile pass =====
    Most traffic is phones (Instagram), so these tune spacing, tap targets
    and small type for narrow screens. Desktop is untouched. */
@@ -1414,6 +1488,12 @@ footer {
     border-radius: 999px;
   }
   .hero-sub { margin-bottom: 2rem; }
+  .hero .hero-pricing { display: inline-flex; }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
   /* social proof tags were 10px */
   .proof-pill { font-size: 0.72rem; }
@@ -1450,6 +1530,11 @@ footer {
   .footer-col { gap: 0; }
   .footer-link { padding: 0.6rem 0; }
   .footer-header { margin-bottom: 0.25rem; }
+}
+
+/* Smallest phones: keep Book your call and See pricing on one row */
+@media (max-width: 380px) {
+  .hero .link-small { padding: 0.9rem 1rem; }
 }
 
 /* ===== Mobile overrides that must outrank later base rules =====

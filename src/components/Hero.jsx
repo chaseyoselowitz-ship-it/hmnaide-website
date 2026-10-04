@@ -13,13 +13,19 @@ export default function Hero() {
           rest. You train your way out. Custom 1:1 strength and mobility
           coaching, for everyday athletes up to world champions.
         </p>
-        <a
-          href={CALENDLY_URL}
-          onClick={openCalendly}
-          className="link-small link-small--primary"
-        >
-          BOOK YOUR CALL ⊕
-        </a>
+        <div className="hero-ctas">
+          <a
+            href={CALENDLY_URL}
+            onClick={openCalendly}
+            className="link-small link-small--primary"
+          >
+            BOOK YOUR CALL ⊕
+          </a>
+          {/* Phones only: the mobile header has no room for the Pricing pill */}
+          <a href="/pricing" className="link-small hero-pricing">
+            SEE PRICING →
+          </a>
+        </div>
         <span className="hero-micro">
           South Florida in person · Worldwide remote
         </span>

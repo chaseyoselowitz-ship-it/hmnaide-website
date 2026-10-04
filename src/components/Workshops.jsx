@@ -14,7 +14,7 @@ export default function Workshops() {
   }, []);
 
   return (
-    <section id="workshops" className="section border-top">
+    <section id="workshops" className="section section--emerald">
       <div className="container">
         <div className="grid workshops-grid">
           <div className="workshops-media">
@@ -34,12 +34,14 @@ export default function Workshops() {
             <span className="label">Mobility Workshops</span>
             <div className="rule-accent" />
             <p>Mobility workshops for gyms, events, and teams.</p>
-            <a
-              href="/contact-us"
-              className="btn-pill btn-pill--primary"
-            >
-              Get in touch
-            </a>
+            <div className="workshops-actions">
+              <a href="/events" className="btn-pill btn-pill--ink">
+                See upcoming workshops
+              </a>
+              <a href="/contact-us" className="btn-pill btn-pill--outline-ink">
+                Host one
+              </a>
+            </div>
           </div>
         </div>
       </div>

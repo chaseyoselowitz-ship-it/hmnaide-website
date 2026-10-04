@@ -59,7 +59,7 @@ const FAQS = [
     n: '06',
     q: 'What’s the difference between the packages?',
     a: [
-      'The assessment decides the program; the package decides how much of me you get.',
+      'What we find in your first session decides the program; the package decides how much of me you get.',
     ],
   },
 ];
