@@ -1452,6 +1452,9 @@ footer {
 .faq-mark::before,
 .faq-mark::after { background: var(--emerald); }
 
+/* Hero "See pricing" link: phones only (desktop has the Pricing nav pill) */
+.hero-pricing { display: none; }
+
 /* ===== Mobile pass =====
    Most traffic is phones (Instagram), so these tune spacing, tap targets
    and small type for narrow screens. Desktop is untouched. */
@@ -1467,6 +1470,12 @@ footer {
     border-radius: 999px;
   }
   .hero-sub { margin-bottom: 2rem; }
+  .hero .hero-pricing { display: inline-flex; }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
   /* social proof tags were 10px */
   .proof-pill { font-size: 0.72rem; }
@@ -1503,6 +1512,11 @@ footer {
   .footer-col { gap: 0; }
   .footer-link { padding: 0.6rem 0; }
   .footer-header { margin-bottom: 0.25rem; }
+}
+
+/* Smallest phones: keep Book your call and See pricing on one row */
+@media (max-width: 380px) {
+  .hero .link-small { padding: 0.9rem 1rem; }
 }
 
 /* ===== Mobile overrides that must outrank later base rules =====
