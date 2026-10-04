@@ -19,7 +19,7 @@ export default function Header() {
           onClick={openCalendly}
           className="btn-pill nav-apply"
         >
-          Apply
+          Book your call
         </a>
       </nav>
     </header>

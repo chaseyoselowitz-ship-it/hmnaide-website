@@ -28,7 +28,7 @@ export default function Footer() {
           onClick={openCalendly}
               className="footer-link"
             >
-              Book Appointment
+              Book your call
             </a>
             <a href="/contact-us" className="footer-link">
               Contact
