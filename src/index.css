@@ -1726,13 +1726,6 @@ footer {
   background: var(--emerald);
 }
 
-.offer-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: flex-end;
-}
-
 .offer-cta {
   display: flex;
   flex-direction: column;
@@ -1748,7 +1741,6 @@ footer {
 /* Video testimonials */
 .vtest {
   padding-top: 4rem;
-  margin-bottom: 6rem;
 }
 
 .vtest-grid {
@@ -1783,21 +1775,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.pricing-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding-top: 3rem;
-}
-
-.pricing-close-copy {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 800;
-  line-height: 1.15;
-  max-width: 28ch;
-}
-
 @media (max-width: 860px) {
   .offer-prices {
     grid-template-columns: 1fr;
@@ -1817,15 +1794,8 @@ footer {
   .offer-cta {
     align-items: flex-start;
   }
-  .offer-actions {
-    justify-content: flex-start;
-  }
   .vtest-grid {
     grid-template-columns: 1fr;
     max-width: 360px;
-  }
-  .pricing-close {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
