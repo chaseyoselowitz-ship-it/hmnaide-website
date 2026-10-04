@@ -13,7 +13,7 @@ const PACKAGES = [
 
 export default function Packages() {
   return (
-    <section id="packages" className="section border-top">
+    <section id="packages" className="section section--tint">
       <div className="container">
         <span className="label">Packages</span>
         <h2 className="section-head">Two ways to train.</h2>
@@ -27,7 +27,7 @@ export default function Packages() {
           ))}
         </div>
         <p className="package-note">
-          Every package starts with the same assessment. Nothing is pre-written.
+          Every package starts with a full first session where we test how you move. Nothing is pre-written.
         </p>
       </div>
     </section>

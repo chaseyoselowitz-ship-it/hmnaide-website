@@ -5,7 +5,10 @@ export default function Testimonials() {
     <section id="results" className="section border-top">
       <div className="container">
         <span className="label">Client Results</span>
-        <h2 className="section-head">Real people. Real recovery. Real results.</h2>
+        <h2 className="section-head">
+          Real people. Real recovery.{' '}
+          <span className="highlight--accent">Real results.</span>
+        </h2>
         <p className="section-kicker">Nobody here was massaged back to health.</p>
         <div className="tcard-grid">
           {TESTIMONIALS.map((t) => (
