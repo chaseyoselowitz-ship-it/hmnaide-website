@@ -67,12 +67,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <div className="offer-cta">
-                <div className="offer-actions">
-                  <JoinButton />
-                  <a href="/#faq" className="btn-pill">
-                    Read FAQs
-                  </a>
-                </div>
+                <JoinButton />
                 <p className="offer-note">
                   Starts with a free call. Pick a time that works for you.
                 </p>
@@ -103,13 +98,6 @@ export default function Pricing() {
                 </figure>
               ))}
             </div>
-          </section>
-
-          <section className="pricing-close border-top">
-            <p className="pricing-close-copy">
-              Every membership starts the same way.
-            </p>
-            <JoinButton />
           </section>
         </div>
       </main>
