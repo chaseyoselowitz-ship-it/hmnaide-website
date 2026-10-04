@@ -7,7 +7,6 @@ const INCLUDED = [
   'Four 1:1 sessions a month',
   'Starts with a full first session where we test how you move',
   'A program built from what we find. Nothing pre-written.',
-  '3-month commitment',
 ];
 
 // Video testimonials, matched to the homepage quotes by name so the
@@ -50,9 +49,10 @@ export default function Pricing() {
               <div className="offer-price">
                 <span className="offer-when">Month 2 onward</span>
                 <p className="offer-amount">
-                  $480<span className="offer-per">/month</span>
+                  $600<span className="offer-per">/month</span>
                 </p>
-                <p className="offer-detail">4 sessions · $120 per session</p>
+                <p className="offer-detail">4 sessions · $150 per session</p>
+                <p className="offer-term">Requires a 3-month commitment</p>
               </div>
             </div>
 

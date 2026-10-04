@@ -1711,6 +1711,20 @@ footer {
   color: var(--w-body);
 }
 
+/* The condition attached to a price (e.g. the 3-month commitment) */
+.offer-term {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--emerald);
+  border-radius: 999px;
+  color: var(--emerald);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .offer-body {
   display: flex;
   justify-content: space-between;
