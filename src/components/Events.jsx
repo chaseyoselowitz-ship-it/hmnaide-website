@@ -61,12 +61,13 @@ function calendarUrl(e) {
     dates,
     ctz: TZ,
     location: place(e),
-    details: 'Free mobility workshop with HMN AIDE. https://hmnaide.clinic/events',
+    details: `${e.access === 'ticketed' ? 'Mobility with HMN AIDE.' : 'Free mobility workshop with HMN AIDE.'} https://hmnaide.clinic/events`,
   });
   return `https://calendar.google.com/calendar/render?${params}`;
 }
 
 function AccessTag({ access }) {
+  if (access === 'ticketed') return <span className="event-tag">Ticketed</span>;
   return access === 'members' ? (
     <span className="event-tag">Members only</span>
   ) : (
@@ -82,9 +83,19 @@ function EventActions({ event }) {
   }
   return (
     <div className="event-actions">
-      {event.date && (
+      {event.access === 'ticketed' && (
         <a
           className="btn-pill btn-pill--primary"
+          href={event.ticketUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Get tickets
+        </a>
+      )}
+      {event.date && (
+        <a
+          className={`btn-pill${event.access === 'ticketed' ? '' : ' btn-pill--primary'}`}
           href={calendarUrl(event)}
           target="_blank"
           rel="noreferrer"
