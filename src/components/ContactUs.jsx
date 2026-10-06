@@ -38,7 +38,6 @@ export default function ContactUs() {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-left">
-              <p className="label">Workshops &amp; Events</p>
               <h1 className="section-head">Host a workshop.</h1>
               <div className="rule-accent" />
               <p className="contact-intro">

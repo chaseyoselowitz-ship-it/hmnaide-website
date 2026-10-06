@@ -29,7 +29,6 @@ export default function Pricing() {
       <Header />
       <main className="pricing-page">
         <div className="container">
-          <p className="label">Founding Members</p>
           <h1 className="section-head pricing-head">Founding membership.</h1>
           <div className="rule-accent" />
 
@@ -56,7 +55,6 @@ export default function Pricing() {
           </section>
 
           <section className="vtest border-top">
-            <span className="label">Client Results</span>
             <h2 className="section-head">Hear it from them.</h2>
             <div className="vtest-grid">
               {VIDEOS.map((v) => (

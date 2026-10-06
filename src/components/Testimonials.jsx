@@ -4,7 +4,6 @@ export default function Testimonials() {
   return (
     <section id="results" className="section border-top">
       <div className="container">
-        <span className="label">Client Results</span>
         <h2 className="section-head">
           Real people. Real recovery.{' '}
           <span className="highlight--accent">Real results.</span>

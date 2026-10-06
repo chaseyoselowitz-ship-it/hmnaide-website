@@ -163,7 +163,6 @@ export default function Events() {
       <Header />
       <main className="events-page">
         <div className="container">
-          <p className="label">Free Workshops</p>
           <h1 className="section-head events-head">Upcoming workshops.</h1>
           <div className="rule-accent" />
           <p className="events-intro">
