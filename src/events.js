@@ -36,7 +36,7 @@ export const EVENTS = [
   },
   {
     id: 'coco-market-delray',
-    title: 'Mobility Workshop',
+    title: 'Mobility Sessions (Our Booth)',
     venue: 'Coco Market',
     city: 'Delray Beach',
     date: '2026-11-01',
