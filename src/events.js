@@ -53,7 +53,7 @@ export const EVENTS = [
     title: 'Mobility for BJJ',
     venue: 'A1A Beach Club',
     city: 'Little River',
-    date: '2026-11-14',
+    date: '2026-11-21',
     time: null,
     access: 'open',
   },
