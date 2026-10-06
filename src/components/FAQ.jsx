@@ -68,7 +68,6 @@ export default function FAQ() {
   return (
     <section id="faq" className="section border-top">
       <div className="container">
-        <span className="label">Common Questions</span>
         <h2 className="section-head">Questions worth asking.</h2>
         <div className="faq-list">
           {FAQS.map((f) => (

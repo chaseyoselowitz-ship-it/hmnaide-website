@@ -15,7 +15,6 @@ export default function Packages() {
   return (
     <section id="packages" className="section section--tint">
       <div className="container">
-        <span className="label">Packages</span>
         <h2 className="section-head">Two ways to train.</h2>
         <div className="package-grid">
           {PACKAGES.map((p) => (
