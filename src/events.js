@@ -39,6 +39,16 @@ export const EVENTS = [
     access: 'open',
   },
   {
+    id: 'xcell-jiujitsu-boynton',
+    title: 'Mobility Workshop',
+    venue: 'Xcell Jiujitsu Academy',
+    city: 'Boynton Beach',
+    date: '2026-11-07',
+    time: '10:00',
+    endTime: '11:00',
+    access: 'open',
+  },
+  {
     id: 'a1a-beach-club',
     title: 'Mobility for BJJ',
     venue: 'A1A Beach Club',
