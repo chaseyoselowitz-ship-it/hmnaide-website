@@ -4,7 +4,8 @@
 //   date    'YYYY-MM-DD', or null while the date is still being confirmed
 //   time    'HH:MM' 24h local (South Florida), or null for "time TBA"
 //   endTime optional 'HH:MM' for events that run a set window
-//   access  'open' (anyone can come) or 'members' (host gym's members only)
+//   access  'open' (anyone can come), 'members' (host gym's members only),
+//           or 'ticketed' (needs a ticket; set ticketUrl)
 //   city    shown under the venue and used for the directions link
 export const EVENTS = [
   {
@@ -15,7 +16,9 @@ export const EVENTS = [
     date: '2026-10-10',
     time: '13:00',
     endTime: '13:30',
-    access: 'open',
+    access: 'ticketed',
+    ticketUrl:
+      'https://www.eventbrite.com/e/wellness-with-purpose-soflo-premier-health-wellness-experience-tickets-1998992044015?aff=oddtdtcreator',
   },
   {
     id: 'gracie-barra-boynton',
