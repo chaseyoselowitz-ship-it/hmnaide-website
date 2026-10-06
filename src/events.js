@@ -8,6 +8,16 @@
 //   city    shown under the venue and used for the directions link
 export const EVENTS = [
   {
+    id: 'wellness-with-purpose-lantana',
+    title: 'Mobility for BJJ',
+    venue: 'Combat Club',
+    city: 'Lantana',
+    date: '2026-10-10',
+    time: '13:00',
+    endTime: '13:30',
+    access: 'open',
+  },
+  {
     id: 'gracie-barra-boynton',
     title: 'Mobility Workshop',
     venue: 'Gracie Barra',
