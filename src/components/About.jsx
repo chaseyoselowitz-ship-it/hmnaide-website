@@ -13,7 +13,6 @@ export default function About() {
   return (
     <section id="about" className="section border-top">
       <div className="container">
-        <span className="label">About</span>
         <div className="about-grid">
           <div className="about-media">
             <img
