@@ -1,4 +1,4 @@
-/* /delete opt-in page. Pure black and white text, one emerald accent. */
+/* /elon opt-in page (the Elon playbook). Pure black and white text, one emerald accent. */
 .optin { max-width: 560px; margin: 0 auto; padding: 32px 20px 72px; color: var(--paper); }
 .optin-logo { display: inline-block; text-decoration: none; color: var(--paper); }
 .optin-title { margin-top: 56px; font-size: clamp(2.1rem, 9vw, 3.4rem); line-height: 0.98; font-weight: 800; letter-spacing: -0.04em; text-transform: uppercase; }

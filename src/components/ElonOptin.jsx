@@ -2,11 +2,11 @@ import { useEffect, useRef } from 'react';
 import Logo from './Logo';
 // Brevo's own subscription form, pasted from Brevo (Contacts > Forms > Share > Embed).
 // Sign-ups only go through Brevo's form, with its consent box and double opt-in.
-import brevoForm from '../brevo/delete-form.html?raw';
+import brevoForm from '../brevo/elon-form.html?raw';
 
 const STEPS = ['Question every rule', 'Delete', 'Simplify', 'Speed up', 'Automate'];
 
-export default function DeleteOptin() {
+export default function ElonOptin() {
   const formRef = useRef(null);
 
   // Brevo's embed needs its own script once the form markup is on the page.
