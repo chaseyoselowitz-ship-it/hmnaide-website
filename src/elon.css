@@ -1,0 +1,44 @@
+/* /elon opt-in page (the Elon playbook). Pure black and white text, one emerald accent. */
+.optin { max-width: 560px; margin: 0 auto; padding: 32px 20px 72px; color: var(--paper); }
+.optin-logo { display: inline-block; text-decoration: none; color: var(--paper); }
+.optin-title { margin-top: 56px; font-size: clamp(2.1rem, 9vw, 3.4rem); line-height: 0.98; font-weight: 800; letter-spacing: -0.04em; text-transform: uppercase; }
+.optin-title span { color: var(--emerald); }
+.optin-lede { margin-top: 22px; font-size: 1.1rem; line-height: 1.5; font-weight: 500; color: var(--paper); }
+.optin-steps { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--paper); }
+.optin-steps li { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--paper); font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; text-transform: uppercase; }
+.optin-steps li span { font-size: 0.75rem; letter-spacing: 0.1em; width: 22px; flex: none; }
+.optin-form { margin-top: 36px; }
+.optin-by { margin-top: 36px; font-size: 0.85rem; font-weight: 500; color: var(--paper); }
+
+/* shared field look, for the placeholder and Brevo's form */
+.optin-placeholder label, .optin-form .entry__label { display: block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--paper); margin-top: 16px; }
+.optin-placeholder input[type='text'], .optin-placeholder input[type='email'], .optin-form .input {
+  display: block; width: 100%; margin-top: 6px; padding: 14px 12px; background: var(--ink); color: var(--paper);
+  border: 1px solid var(--paper); border-radius: 0; font: 500 1rem var(--font-main);
+}
+.optin-placeholder .optin-consent { display: flex; gap: 10px; align-items: flex-start; text-transform: none; letter-spacing: 0; font-weight: 500; font-size: 0.9rem; line-height: 1.4; }
+.optin-placeholder button, .optin-form .sib-form-block__button {
+  margin-top: 22px; width: 100%; padding: 16px; border: 0; border-radius: 999px; background: var(--emerald); color: var(--emerald-ink);
+  font: 800 1rem var(--font-main); letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer;
+}
+.optin-placeholder button:disabled { opacity: 1; cursor: default; }
+.optin-note { margin-top: 12px; font-size: 0.85rem; color: var(--paper); }
+
+/* Brevo form, restyled to the page. Loaded after sib-styles.css, so these win where they overlap. */
+.optin .sib-form { padding: 0; background: transparent; font-family: var(--font-main); text-align: left; }
+.optin .sib-form-container, .optin #sib-container { max-width: none; padding: 0; background: transparent; border: 0; border-radius: 0; }
+.optin #sib-container .sib-form-block { padding: 0; }
+.optin .entry__label { display: block; margin-top: 16px; font: 800 0.75rem var(--font-main); letter-spacing: 0.1em; text-transform: uppercase; color: var(--paper); }
+.optin .entry__label::after { content: none; }
+.optin .entry__field { margin-top: 6px; background: var(--ink); border: 1px solid var(--paper) !important; border-radius: 0; box-shadow: none !important; }
+.optin .entry__field .input { width: 100%; padding: 14px 12px; background: var(--ink); color: var(--paper); border: 0; font: 500 1rem var(--font-main); }
+.optin .entry__error { margin-top: 6px; padding: 0; border: 0; background: none; color: var(--paper) !important; font: 600 0.85rem var(--font-main); }
+.optin .sib-optin { margin-top: 18px; }
+.optin .entry__choice label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.optin .entry__choice .checkbox { flex: none; width: 20px; height: 20px; border: 1px solid var(--paper); border-radius: 0; background: var(--ink); }
+.optin .entry__choice input:checked + .checkbox { background: var(--emerald); border-color: var(--emerald); }
+.optin .optin-text { font: 500 0.95rem/1.4 var(--font-main); color: var(--paper); }
+.optin .sib-form-block__button { display: block; margin-top: 22px; width: 100%; padding: 16px; border: 0; border-radius: 999px; background: var(--emerald); color: var(--emerald-ink); font: 800 1rem var(--font-main); letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; text-align: center; }
+.optin .sib-form-message-panel { margin: 0 0 18px; padding: 16px; max-width: none; border: 1px solid var(--paper); border-radius: 0; background: var(--ink); color: var(--paper); font: 600 1rem/1.4 var(--font-main); }
+.optin #success-message { border-color: var(--emerald); }
+.optin .sib-form-message-panel__text { justify-content: flex-start; }
