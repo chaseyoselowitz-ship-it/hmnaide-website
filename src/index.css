@@ -1089,6 +1089,11 @@ footer {
   /* scale the headline so "RECOVERY." fits narrow screens */
   .hero-title { font-size: clamp(2.5rem, 13vw, 4rem); }
   .hero-sub { font-size: 1.15rem; max-width: 100%; }
+  /* the paragraph runs full width on phones, so the scrim has to cover the
+     right side too, or the wave sits behind the words */
+  .hero::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.85) 70%, rgba(0, 0, 0, 0.55) 100%);
+  }
   .grid { display: flex; flex-direction: column; }
   /* mobile: keep only the Book your call CTA in the sticky header, hide the rest */
   .nav-group a:not(.nav-apply) { display: none; }
